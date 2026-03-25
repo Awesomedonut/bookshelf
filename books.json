@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg",
+    "shelf": "read",
+    "rating": 5,
+    "comment": "mr. darcy my beloved!! the enemies-to-lovers pipeline is REAL",
+    "dateAdded": "2025-01-15"
+  },
+  {
+    "title": "The Secret History",
+    "author": "Donna Tartt",
+    "cover": "https://covers.openlibrary.org/b/isbn/9781400031702-L.jpg",
+    "shelf": "read",
+    "rating": 4,
+    "comment": "unhinged classics students... i get it",
+    "dateAdded": "2025-02-20"
+  },
+  {
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780316556347-L.jpg",
+    "shelf": "currently-reading",
+    "comment": "witch era activated",
+    "dateAdded": "2025-03-10"
+  },
+  {
+    "title": "The Song of Achilles",
+    "author": "Madeline Miller",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780062060624-L.jpg",
+    "shelf": "want-to-read",
+    "comment": "heard this will DESTROY me",
+    "dateAdded": "2025-03-20"
+  },
+  {
+    "title": "Normal People",
+    "author": "Sally Rooney",
+    "cover": "https://covers.openlibrary.org/b/isbn/9781984822178-L.jpg",
+    "shelf": "read",
+    "rating": 4,
+    "comment": "connell's chain lives rent free in my mind",
+    "dateAdded": "2025-01-30"
+  },
+  {
+    "title": "Mexican Gothic",
+    "author": "Silvia Moreno-Garcia",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780525620785-L.jpg",
+    "shelf": "want-to-read",
+    "comment": "spooky glamorous queen energy",
+    "dateAdded": "2025-03-22"
+  }
+]
