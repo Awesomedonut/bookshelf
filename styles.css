@@ -96,48 +96,27 @@ header h1 {
   margin-top: 0.25rem;
 }
 
-/* ===== tabs ===== */
-.tabs {
-  display: flex;
-  gap: 0.25rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-  z-index: 1;
-}
-
-.tab {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.6rem 1.4rem;
-  border: 2px solid var(--cream);
-  border-radius: 999px;
-  background: var(--bg-light);
-  color: var(--brown);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.tab:hover {
-  border-color: var(--dusty-rose);
-  color: var(--rose-dark);
-}
-
-.tab.active {
-  background: var(--dusty-rose);
-  border-color: var(--dusty-rose);
-  color: #fff;
-}
-
-/* ===== main / shelf ===== */
+/* ===== main / shelves ===== */
 main {
   width: 100%;
   max-width: 1000px;
   padding: 0 1.5rem 3rem;
   z-index: 1;
   flex: 1;
+}
+
+.shelf-section {
+  margin-bottom: 2.5rem;
+}
+
+.shelf-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--dusty-rose);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .shelf-container {
@@ -150,7 +129,7 @@ main {
   gap: 2rem;
   justify-content: center;
   padding: 1rem 1rem 0;
-  min-height: 260px;
+  min-height: 120px;
   align-items: flex-end;
 }
 
@@ -435,35 +414,14 @@ footer {
   content: attr(data-retro);
 }
 
-/* ── tabs ── */
-[data-theme="retro"] .tab {
+/* ── shelf label ── */
+[data-theme="retro"] .shelf-label {
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.6rem;
-  border-radius: 4px;
-  border: 3px solid #CC00FF;
-  background: var(--bg);
-  color: #C8A2E6;
+  font-size: clamp(0.6rem, 2vw, 0.8rem);
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF, 0 0 20px rgba(0, 255, 255, 0.3);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 4px 4px 0 #3D1F5C;
-  transition: all 0.15s ease;
-}
-
-[data-theme="retro"] .tab:hover {
-  border-color: #FF69B4;
-  color: #FF69B4;
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0 #3D1F5C;
-}
-
-[data-theme="retro"] .tab.active {
-  background: linear-gradient(135deg, #FF69B4, #CC00FF);
-  border-color: #FF69B4;
-  color: #fff;
-  box-shadow:
-    4px 4px 0 #3D1F5C,
-    0 0 12px rgba(255, 105, 180, 0.4);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
 }
 
 /* ── shelf plank → neon platform ── */
@@ -596,19 +554,6 @@ footer {
     width: 180px;
     padding: 0.75rem;
     font-size: 0.9rem;
-  }
-
-  .tabs {
-    gap: 0.4rem;
-  }
-
-  .tab {
-    font-size: 0.82rem;
-    padding: 0.5rem 1rem;
-  }
-
-  [data-theme="retro"] .tab {
-    font-size: 0.5rem;
   }
 
   .theme-toggle {

@@ -1,9 +1,53 @@
 const ANIMATION_STAGGER_MS = 100;
 const MAX_RATING = 5;
 
+export const SHELVES = [
+  { id: 'currently-reading', label: 'Currently Reading' },
+  { id: 'read',              label: 'Read' },
+  { id: 'want-to-read',     label: 'Want to Read' },
+];
+
 export async function fetchBooks() {
   const response = await fetch('books.json');
   return response.json();
+}
+
+export function createShelfSection(shelf, books, staggerOffset) {
+  const booksOnShelf = books.filter(book => book.shelf === shelf.id);
+
+  const section = document.createElement('section');
+  section.className = 'shelf-section';
+
+  const label = document.createElement('h2');
+  label.className = 'shelf-label';
+  label.textContent = shelf.label;
+  section.appendChild(label);
+
+  const container = document.createElement('div');
+  container.className = 'shelf-container';
+
+  const grid = document.createElement('div');
+  grid.className = 'books-grid';
+
+  if (booksOnShelf.length === 0) {
+    const emptyMsg = document.createElement('p');
+    emptyMsg.className = 'empty-msg';
+    emptyMsg.textContent = 'nothing here yet...';
+    grid.appendChild(emptyMsg);
+  } else {
+    booksOnShelf.forEach((book, index) => {
+      grid.appendChild(createBookCard(book, staggerOffset + index));
+    });
+  }
+
+  const plank = document.createElement('div');
+  plank.className = 'shelf-plank';
+
+  container.appendChild(grid);
+  container.appendChild(plank);
+  section.appendChild(container);
+
+  return { element: section, bookCount: booksOnShelf.length };
 }
 
 export function createBookCard(book, index) {
