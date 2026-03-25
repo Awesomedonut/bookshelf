@@ -2,8 +2,38 @@
   const grid = document.getElementById('books-grid');
   const emptyMsg = document.getElementById('empty-msg');
   const tabs = document.querySelectorAll('.tab');
+  const themeBtn = document.getElementById('theme-toggle');
   let books = [];
   let currentShelf = 'currently-reading';
+
+  // ── theme ───────────────────────────────────────────
+  const THEMES = ['cozy', 'retro'];
+
+  function getTheme() {
+    return localStorage.getItem('bookshelf-theme') || 'cozy';
+  }
+
+  function setTheme(name) {
+    localStorage.setItem('bookshelf-theme', name);
+    if (name === 'cozy') {
+      delete document.documentElement.dataset.theme;
+    } else {
+      document.documentElement.dataset.theme = name;
+    }
+    // recreate particles with theme-appropriate style
+    recreateParticles();
+  }
+
+  function cycleTheme() {
+    const cur = getTheme();
+    const next = THEMES[(THEMES.indexOf(cur) + 1) % THEMES.length];
+    setTheme(next);
+  }
+
+  themeBtn.addEventListener('click', cycleTheme);
+
+  // apply saved theme immediately
+  setTheme(getTheme());
 
   // ── fetch & render ──────────────────────────────────
   async function init() {
@@ -113,21 +143,41 @@
   // ── particles ───────────────────────────────────────
   function createParticles() {
     const container = document.querySelector('.particles');
-    const count = 18;
+    const isRetro = getTheme() === 'retro';
+    const count = isRetro ? 25 : 18;
 
     for (let i = 0; i < count; i++) {
       const p = document.createElement('div');
       p.className = 'particle';
       p.style.left = Math.random() * 100 + '%';
       p.style.top = (60 + Math.random() * 40) + '%';
-      p.style.width = p.style.height = (3 + Math.random() * 5) + 'px';
-      p.style.animationDuration = (8 + Math.random() * 14) + 's';
-      p.style.animationDelay = (Math.random() * 12) + 's';
-      p.style.background = Math.random() > 0.5
-        ? 'var(--gold)'
-        : 'var(--dusty-rose)';
+
+      if (isRetro) {
+        // smaller, more sparkly for retro
+        const size = (2 + Math.random() * 4) + 'px';
+        p.style.width = p.style.height = size;
+        p.style.animationDuration = (5 + Math.random() * 10) + 's';
+        p.style.animationDelay = (Math.random() * 8) + 's';
+        const colors = ['#FF69B4', '#CC00FF', '#00FFFF', '#FFE100'];
+        p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      } else {
+        const size = (3 + Math.random() * 5) + 'px';
+        p.style.width = p.style.height = size;
+        p.style.animationDuration = (8 + Math.random() * 14) + 's';
+        p.style.animationDelay = (Math.random() * 12) + 's';
+        p.style.background = Math.random() > 0.5
+          ? 'var(--gold)'
+          : 'var(--dusty-rose)';
+      }
+
       container.appendChild(p);
     }
+  }
+
+  function recreateParticles() {
+    const container = document.querySelector('.particles');
+    container.innerHTML = '';
+    createParticles();
   }
 
   // ── go ──────────────────────────────────────────────
