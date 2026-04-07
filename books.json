@@ -20,6 +20,37 @@
     "author": "David Prakel",
     "cover": "covers/composition-david-prakel.jpg",
     "shelf": "marinating",
+    "comment": "VERY useful. also, the pics in this book are (naturally) gorgeous",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "First Philosophy",
+    "author": "Andrew Bailey",
+    "cover": "covers/first-philosophy-andrew-bailey.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Ancient Greek Gadgets and Machines",
+    "author": "Robert S. Brumbaugh",
+    "cover": "covers/ancient-greek-gadgets-brumbaugh.jpg",
+    "shelf": "marinating",
+    "comment": "super cool diagrams",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "The Education of a Photographer",
+    "author": "Charles H. Traub et al.",
+    "cover": "covers/education-of-a-photographer-traub.jpg",
+    "shelf": "marinating",
+    "comment": "more on philosophy of photography, not technique",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Philosophy and Probability",
+    "author": "Timothy Childers",
+    "cover": "covers/philosophy-probability-childers.jpg",
+    "shelf": "marinating",
     "dateAdded": "2026-04-06"
   }
 ]
