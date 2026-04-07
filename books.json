@@ -114,5 +114,44 @@
     "cover": "covers/history-east-asia-holcombe.jpg",
     "shelf": "marinating",
     "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Side Hustle",
+    "author": "Chris Guillebeau",
+    "cover": "covers/side-hustle-guillebeau.jpg",
+    "shelf": "marinating",
+    "comment": "skim fast",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Impacts of Modernities",
+    "author": "Thomas Lamarre & Kang Nae-Hui",
+    "cover": "covers/impacts-modernities-thomas-kang.jpg",
+    "shelf": "marinating",
+    "comment": "interesting bit on modernization of writing/language",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Empires in World History",
+    "author": "Jane Burbank & Frederick Cooper",
+    "cover": "covers/empires-world-history-burbank.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Early China/Ancient Greece",
+    "author": "Steven Shankman & Stephen W. Durrant",
+    "cover": "covers/early-china-ancient-greece-shankman.jpg",
+    "shelf": "marinating",
+    "comment": "toread section on historical women",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "The Cambridge Illustrated History of China",
+    "author": "Patricia Buckley Ebrey",
+    "cover": "covers/cambridge-illustrated-history-china-ebrey.jpg",
+    "shelf": "marinating",
+    "comment": "lovely art!!",
+    "dateAdded": "2026-04-06"
   }
 ]

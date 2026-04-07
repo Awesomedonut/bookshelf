@@ -21,6 +21,7 @@ async function initialize() {
   }
 
   renderAllShelves(books);
+  document.getElementById('book-counter').textContent = `${books.length} book${books.length === 1 ? '' : 's'}`;
   populateParticles(particleContainer);
 }
 

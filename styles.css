@@ -28,11 +28,11 @@ body {
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--brown-dark);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -97,6 +97,10 @@ header h1 {
   margin-top: 0.15rem;
 }
 
+.book-counter {
+  color: var(--brown-light);
+}
+
 /* ===== main / shelves ===== */
 main {
   width: 100%;
@@ -106,7 +110,6 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 0.4rem;
   min-height: 0;
 }
@@ -409,6 +412,10 @@ footer {
   font-size: 1.4rem;
   color: #00FFFF;
   text-shadow: 0 0 8px #00FFFF;
+}
+
+[data-theme="retro"] .book-counter {
+  color: #FF69B4;
 }
 
 /* ── theme toggle ── */
