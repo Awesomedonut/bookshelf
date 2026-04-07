@@ -51,6 +51,68 @@
     "author": "Timothy Childers",
     "cover": "covers/philosophy-probability-childers.jpg",
     "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Queen Victoria and Her Prime Ministers",
+    "author": "Anne Somerset",
+    "cover": "covers/queen-victoria-pms-somerset.jpg",
+    "shelf": "marinating",
+    "comment": "fascinating subject matter, lovely cover, lots of cool pics/art",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Good Arguments",
+    "author": "C.A. Missimer",
+    "cover": "covers/good-arguments-missimer.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Critical Thinking",
+    "author": "William Hughes",
+    "cover": "covers/critical-thinking-hughes.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Ultimate Presentations",
+    "author": "Jay Surti",
+    "cover": "covers/ultimate-presentations-surti.jpg",
+    "shelf": "marinating",
+    "comment": "seems to be a lot of common sense; skim quickly",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Critical Reading and Writing for Postgraduates",
+    "author": "Mike Wallace & Alison Wray",
+    "cover": "covers/critical-reading-writing-wallace-wray.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Tractatus Logico-Philosophicus",
+    "author": "Ludwig Wittgenstein",
+    "cover": "covers/tractatus-wittgenstein.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Pre-Modern East Asia: To 1800",
+    "author": "Patricia Buckley Ebrey et al.",
+    "cover": "covers/premodern-east-asia-ebrey.jpg",
+    "shelf": "marinating",
+    "comment": "great info, wish more of the art was coloured",
+    "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "A History of East Asia",
+    "author": "Charles Holcombe",
+    "cover": "covers/history-east-asia-holcombe.jpg",
+    "shelf": "marinating",
     "dateAdded": "2026-04-06"
   }
 ]

@@ -295,6 +295,16 @@ main {
   line-height: 1.4;
 }
 
+.star-badge {
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.book.starred {
+  filter: drop-shadow(0 0 6px var(--gold));
+}
+
 /* ===== empty state ===== */
 .empty-msg {
   text-align: center;
@@ -517,6 +527,15 @@ footer {
   font-style: normal;
   font-size: 1rem;
   color: #C8A2E6;
+}
+
+[data-theme="retro"] .star-badge {
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+[data-theme="retro"] .book.starred {
+  filter: drop-shadow(0 0 8px #FFD700);
 }
 
 /* ── particles become stars ── */

@@ -14,7 +14,9 @@ export async function fetchBooks() {
 }
 
 export function createShelfSection(shelf, books, staggerOffset) {
-  const booksOnShelf = books.filter(book => book.shelf === shelf.id);
+  const booksOnShelf = books
+    .filter(book => book.shelf === shelf.id)
+    .sort((a, b) => (b.starred ? 1 : 0) - (a.starred ? 1 : 0));
 
   const section = document.createElement('section');
   section.className = 'shelf-section';
@@ -53,11 +55,12 @@ export function createShelfSection(shelf, books, staggerOffset) {
 
 export function createBookCard(book, index) {
   const card = document.createElement('div');
-  card.className = 'book';
+  card.className = `book${book.starred ? ' starred' : ''}`;
   card.style.setProperty('--delay', `${index * ANIMATION_STAGGER_MS}ms`);
 
   card.innerHTML = `
     <div class="book-info">
+      ${book.starred ? '<div class="star-badge">&#9733;</div>' : ''}
       <div class="title">${escapeHtml(book.title)}</div>
       <div class="author">${escapeHtml(book.author)}</div>
       ${renderRating(book.rating)}
