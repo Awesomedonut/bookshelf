@@ -153,5 +153,428 @@
     "shelf": "marinating",
     "comment": "lovely art!!",
     "dateAdded": "2026-04-06"
+  },
+  {
+    "title": "Orientalism",
+    "author": "Edward Said",
+    "cover": "covers/orientalism-said.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Left Hand of Darkness",
+    "author": "Ursula K. Le Guin",
+    "cover": "covers/the-left-hand-of-darkness-le-guin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Blazing World",
+    "author": "Margaret Cavendish",
+    "cover": "covers/the-blazing-world-cavendish.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "I Who Have Never Known Men",
+    "author": "Jacqueline Harpman",
+    "cover": "covers/i-who-have-never-known-men-harpman.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Hag-Seed",
+    "author": "Margaret Atwood",
+    "cover": "covers/hag-seed-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Oryx and Crake",
+    "author": "Margaret Atwood",
+    "cover": "covers/oryx-and-crake-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Year of the Flood",
+    "author": "Margaret Atwood",
+    "cover": "covers/the-year-of-the-flood-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "MaddAddam",
+    "author": "Margaret Atwood",
+    "cover": "covers/maddaddam-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "cover": "covers/pride-and-prejudice-austen.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "cover": "covers/brave-new-world-huxley.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "cover": "covers/crime-and-punishment-dostoevsky.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Secret History",
+    "author": "Donna Tartt",
+    "cover": "covers/the-secret-history-tartt.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Call of the Wild",
+    "author": "Jack London",
+    "cover": "covers/the-call-of-the-wild-london.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Persuasion",
+    "author": "Jane Austen",
+    "cover": "covers/persuasion-austen.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "cover": "covers/les-miserables-hugo.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "cover": "covers/frankenstein-shelley.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Iliad",
+    "author": "Homer",
+    "cover": "covers/the-iliad-homer.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "cover": "covers/great-expectations-dickens.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Romance of the Three Kingdoms",
+    "author": "Luo Guanzhong",
+    "cover": "covers/romance-of-the-three-kingdoms-luo.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Water Margin",
+    "author": "Shi Nai'an",
+    "cover": "covers/water-margin-shi.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Journey to the West",
+    "author": "Wu Cheng'en",
+    "cover": "covers/journey-to-the-west-wu.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Dream of the Red Chamber",
+    "author": "Cao Xueqin",
+    "cover": "covers/dream-of-the-red-chamber-cao.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Book and the Sword",
+    "author": "Jin Yong",
+    "cover": "covers/the-book-and-the-sword-jin-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Sword Stained with Royal Blood",
+    "author": "Jin Yong",
+    "cover": "covers/sword-stained-with-royal-blood-jin-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Legend of the Condor Heroes",
+    "author": "Jin Yong",
+    "cover": "covers/the-legend-of-the-condor-heroes-jin-yong.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Return of the Condor Heroes",
+    "author": "Jin Yong",
+    "cover": "covers/the-return-of-the-condor-heroes-jin-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Heaven Sword and Dragon Saber",
+    "author": "Jin Yong",
+    "cover": "covers/the-heaven-sword-and-dragon-saber-jin-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Fox Volant of the Snowy Mountain",
+    "author": "Jin Yong",
+    "cover": "covers/fox-volant-of-the-snowy-mountain-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Young Flying Fox",
+    "author": "Jin Yong",
+    "cover": "covers/the-young-flying-fox-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Deadly Secret",
+    "author": "Jin Yong",
+    "cover": "covers/a-deadly-secret-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Demi-Gods and Semi-Devils",
+    "author": "Jin Yong",
+    "cover": "covers/demi-gods-and-semi-devils-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Ode to Gallantry",
+    "author": "Jin Yong",
+    "cover": "covers/ode-to-gallantry-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Smiling, Proud Wanderer",
+    "author": "Jin Yong",
+    "cover": "covers/the-smiling-proud-wanderer-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Deer and the Cauldron",
+    "author": "Jin Yong",
+    "cover": "covers/the-deer-and-the-cauldron-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Blade-dance of the Two Lovers",
+    "author": "Jin Yong",
+    "cover": "covers/mandarin-duck-blades-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "White Horse Neighs in the Western Wind",
+    "author": "Jin Yong",
+    "cover": "covers/white-horse-neighs-in-the-western-wind-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Sword of the Yue Maiden",
+    "author": "Jin Yong",
+    "cover": "covers/sword-of-the-yue-maiden-yong.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Atlas Shrugged",
+    "author": "Ayn Rand",
+    "cover": "covers/atlas-shrugged-rand.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Fountainhead",
+    "author": "Ayn Rand",
+    "cover": "covers/the-fountainhead-rand.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Little Women",
+    "author": "Louisa May Alcott",
+    "cover": "covers/little-women-alcott.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Prince",
+    "author": "Niccolò Machiavelli",
+    "cover": "covers/the-prince-machiavelli.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "cover": "covers/the-diary-of-a-young-girl-frank.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Republic",
+    "author": "Plato",
+    "cover": "covers/the-republic-plato.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Wealth of Nations",
+    "author": "Adam Smith",
+    "cover": "covers/the-wealth-of-nations-smith.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Theory of Moral Sentiments",
+    "author": "Adam Smith",
+    "cover": "covers/the-theory-of-moral-sentiments-smith.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Vindication of the Rights of Woman",
+    "author": "Mary Wollstonecraft",
+    "cover": "covers/a-vindication-of-the-rights-of-woman-wollstonecraft.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Dao De Jing",
+    "author": "Laozi",
+    "cover": "covers/dao-de-jing-laozi.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Murder on the Orient Express",
+    "author": "Agatha Christie",
+    "cover": "covers/murder-on-the-orient-express-christie.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Second Sex",
+    "author": "Simone de Beauvoir",
+    "cover": "covers/the-second-sex-beauvoir.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "cover": "covers/a-game-of-thrones-martin.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Clash of Kings",
+    "author": "George R.R. Martin",
+    "cover": "covers/a-clash-of-kings-martin.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Storm of Swords",
+    "author": "George R.R. Martin",
+    "cover": "covers/a-storm-of-swords-martin.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Feast for Crows",
+    "author": "George R.R. Martin",
+    "cover": "covers/a-feast-for-crows-martin.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Dance with Dragons",
+    "author": "George R.R. Martin",
+    "cover": "covers/a-dance-with-dragons-martin.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Grace of Kings",
+    "author": "Ken Liu",
+    "cover": "covers/the-grace-of-kings-liu.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Wall of Storms",
+    "author": "Ken Liu",
+    "cover": "covers/the-wall-of-storms-liu.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Veiled Throne",
+    "author": "Ken Liu",
+    "cover": "covers/the-veiled-throne-liu.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Speaking Bones",
+    "author": "Ken Liu",
+    "cover": "covers/speaking-bones-liu.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Right-Wing Women",
+    "author": "Andrea Dworkin",
+    "cover": "covers/right-wing-women-dworkin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Woman Hating",
+    "author": "Andrea Dworkin",
+    "cover": "covers/woman-hating-dworkin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
   }
 ]
