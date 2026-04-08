@@ -1036,5 +1036,12 @@
     "cover": "covers/amelia-earhart-rich.jpg",
     "shelf": "want-to-read",
     "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Poet Empress",
+    "author": "Shen Tao",
+    "cover": "covers/the-poet-empress-tao.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
   }
 ]
