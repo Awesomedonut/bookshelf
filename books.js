@@ -6,6 +6,7 @@ export const SHELVES = [
   { id: 'read',              label: 'Read' },
   { id: 'want-to-read',     label: 'Want to Read' },
   { id: 'marinating',        label: 'Skimmed & For Later' },
+  { id: 'on-hold',           label: 'On Hold' },
 ];
 
 export async function fetchBooks() {

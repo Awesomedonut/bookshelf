@@ -308,6 +308,7 @@
     "author": "Cao Xueqin",
     "cover": "covers/dream-of-the-red-chamber-cao.jpg",
     "shelf": "want-to-read",
+    "starred": true,
     "dateAdded": "2026-04-07"
   },
   {
@@ -575,6 +576,276 @@
     "author": "Andrea Dworkin",
     "cover": "covers/woman-hating-dworkin.jpg",
     "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "cover": "covers/steve-jobs-isaacson.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Big Sister, Little Sister, Red Sister",
+    "author": "Jung Chang",
+    "cover": "covers/big-sister-little-sister-red-sister-chang.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Empress Dowager Cixi",
+    "author": "Jung Chang",
+    "cover": "covers/empress-dowager-cixi-chang.jpg",
+    "shelf": "on-hold",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Invisible Women",
+    "author": "Caroline Criado Perez",
+    "cover": "covers/invisible-women-criado-perez.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Mrs Dalloway",
+    "author": "Virginia Woolf",
+    "cover": "covers/mrs-dalloway-woolf.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "To the Lighthouse",
+    "author": "Virginia Woolf",
+    "cover": "covers/to-the-lighthouse-woolf.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Secret History of the Mongol Queens",
+    "author": "Jack Weatherford",
+    "cover": "covers/the-secret-history-of-the-mongol-queens-weatherford.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Book of Lives",
+    "author": "Margaret Atwood",
+    "cover": "covers/book-of-lives-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Room of One's Own",
+    "author": "Virginia Woolf",
+    "cover": "covers/a-room-of-ones-own-woolf.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Burning Questions",
+    "author": "Margaret Atwood",
+    "cover": "covers/burning-questions-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Pillow Book",
+    "author": "Sei Shōnagon",
+    "cover": "covers/the-pillow-book-shonagon.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Tale of Genji",
+    "author": "Murasaki Shikibu",
+    "cover": "covers/the-tale-of-genji-shikibu.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Book of the City of Ladies",
+    "author": "Christine de Pizan",
+    "cover": "covers/the-book-of-the-city-of-ladies-de-pizan.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Lessons for Women",
+    "author": "Ban Zhao",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Li Ch'ing-chao Complete Poems",
+    "author": "Li Qingzhao",
+    "cover": "covers/li-qingzhaos-complete-poems-and-essays-li.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "From Emperor to Citizen",
+    "author": "Puyi",
+    "cover": "covers/from-emperor-to-citizen-puyi.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Eighteen Songs of a Nomad Flute: The Story of Lady Wen-Chi",
+    "author": "Cai Wenji",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Collected Poetry of Xie Daoyun",
+    "author": "Xie Daoyun",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Collected Works of Shangguan Wan'er",
+    "author": "Shangguan Wan'er",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Go Ask the River",
+    "author": "Evelyn Eaton",
+    "cover": "covers/go-ask-the-river-eaton.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Literary Tanci",
+    "author": "Siao-chen Hu",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Women Writers of Traditional China",
+    "author": "Kang-i Sun Chang",
+    "cover": "covers/women-writers-of-traditional-china-chang.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Parable of the Sower",
+    "author": "Octavia Butler",
+    "cover": "covers/parable-of-the-sower-butler.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Rape of Nanking",
+    "author": "Iris Chang",
+    "cover": "covers/the-rape-of-nanking-chang.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Chinese in America",
+    "author": "Iris Chang",
+    "cover": "covers/the-chinese-in-america-chang.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Paper Menagerie and Other Stories",
+    "author": "Ken Liu",
+    "cover": "covers/the-paper-menagerie-and-other-stories-liu.jpg",
+    "shelf": "on-hold",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Three-Body Problem",
+    "author": "Liu Cixin",
+    "cover": "covers/the-three-body-problem-liu.jpg",
+    "shelf": "on-hold",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Sword of Kaigen",
+    "author": "M.L. Wang",
+    "cover": "covers/the-sword-of-kaigen-wang.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Mme Sun Yat-sen (Soong Ching-ling)",
+    "author": "Jung Chang",
+    "cover": "covers/mme-sun-yat-sen-chang.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "1434: The Year a Magnificent Chinese Fleet Sailed to Italy and Ignited the Renaissance",
+    "author": "Gavin Menzies",
+    "cover": "covers/1434-menzies.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Search for Modern China",
+    "author": "Jonathan Spence",
+    "cover": "covers/the-search-for-modern-china-spence.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Emperor of China: Self-Portrait of K'ang-hsi",
+    "author": "Jonathan Spence",
+    "cover": "covers/emperor-of-china-spence.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Imperial China 900-1800",
+    "author": "Frederick Mote",
+    "cover": "covers/imperial-china-900-1800-mote.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "China's Cosmopolitan Empire",
+    "author": "Mark Edward Lewis",
+    "cover": "covers/chinas-cosmopolitan-empire-lewis.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Inner Quarters",
+    "author": "Patricia Buckley Ebrey",
+    "cover": "covers/the-inner-quarters-ebrey.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Teachers of the Inner Chambers",
+    "author": "Dorothy Ko",
+    "cover": "covers/teachers-of-the-inner-chambers-ko.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Precious Records",
+    "author": "Susan Mann",
+    "cover": "covers/precious-records-mann.jpg",
+    "shelf": "want-to-read",
+    "starred": true,
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Shortest History of China",
+    "author": "Linda Jaivin",
+    "cover": "covers/the-shortest-history-of-china-jaivin.jpg",
+    "shelf": "read",
     "dateAdded": "2026-04-07"
   }
 ]
