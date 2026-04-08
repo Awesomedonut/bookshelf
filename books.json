@@ -966,5 +966,75 @@
     "cover": "covers/valentina-tereshkova-in-her-own-words-tereshkova.jpg",
     "shelf": "want-to-read",
     "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Innovators",
+    "author": "Walter Isaacson",
+    "cover": "covers/the-innovators-isaacson.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Leonardo da Vinci",
+    "author": "Walter Isaacson",
+    "cover": "covers/leonardo-da-vinci-isaacson.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Madame Wu Chien-Shiung: The First Lady of Physics Research",
+    "author": "Tsai-Chien Chiang",
+    "cover": "covers/madame-wu-chien-shiung-chiang.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Dorothy Crowfoot Hodgkin: Patterns, Proteins and Peace",
+    "author": "Georgina Ferry",
+    "cover": "covers/dorothy-crowfoot-hodgkin-ferry.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The House of Rothschild: Money's Prophets 1798-1848",
+    "author": "Niall Ferguson",
+    "cover": "covers/the-house-of-rothschild-ferguson.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Rosalind Franklin: The Dark Lady of DNA",
+    "author": "Brenda Maddox",
+    "cover": "covers/rosalind-franklin-maddox.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Women in Science: 50 Fearless Pioneers Who Changed the World",
+    "author": "Rachel Ignotofsky",
+    "cover": "covers/women-in-science-ignotofsky.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Sound of Wings",
+    "author": "Mary S. Lovell",
+    "cover": "covers/the-sound-of-wings-lovell.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "East to the Dawn",
+    "author": "Susan Butler",
+    "cover": "covers/east-to-the-dawn-butler.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Amelia Earhart: A Biography",
+    "author": "Doris L. Rich",
+    "cover": "covers/amelia-earhart-rich.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
   }
 ]
