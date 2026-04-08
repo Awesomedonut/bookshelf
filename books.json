@@ -847,5 +847,117 @@
     "cover": "covers/the-shortest-history-of-china-jaivin.jpg",
     "shelf": "read",
     "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "cover": "covers/clean-code-martin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "The Clean Coder",
+    "author": "Robert C. Martin",
+    "cover": "covers/the-clean-coder-martin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Clean Architecture",
+    "author": "Robert C. Martin",
+    "cover": "covers/clean-architecture-martin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Clean Agile",
+    "author": "Robert C. Martin",
+    "cover": "covers/clean-agile-martin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Clean Craftsmanship",
+    "author": "Robert C. Martin",
+    "cover": "covers/clean-craftsmanship-martin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Empire of AI",
+    "author": "Karen Hao",
+    "cover": "covers/empire-of-ai-hao.jpg",
+    "shelf": "on-hold",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Wizard: The Life and Times of Nikola Tesla",
+    "author": "Marc Seifer",
+    "cover": "covers/wizard-the-life-and-times-of-nikola-tesla-seifer.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Tesla: Man Out of Time",
+    "author": "Margaret Cheney",
+    "cover": "covers/tesla-man-out-of-time-cheney.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Marie Curie: A Life",
+    "author": "Susan Quinn",
+    "cover": "covers/marie-curie-a-life-quinn.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Madame Curie",
+    "author": "Eve Curie",
+    "cover": "covers/madame-curie-curie.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Obsessive Genius: The Inner World of Marie Curie",
+    "author": "Barbara Goldsmith",
+    "cover": "covers/obsessive-genius-goldsmith.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Ada's Algorithm",
+    "author": "James Essinger",
+    "cover": "covers/adas-algorithm-essinger.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "In Byron's Wake",
+    "author": "Miranda Seymour",
+    "cover": "covers/in-byrons-wake-seymour.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Grace Hopper and the Invention of the Information Age",
+    "author": "Kurt W. Beyer",
+    "cover": "covers/grace-hopper-and-the-invention-of-the-information-age-beyer.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Broad Band: The Untold Story of the Women Who Made the Internet",
+    "author": "Claire L. Evans",
+    "cover": "covers/broad-band-evans.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "Brotopia",
+    "author": "Emily Chang",
+    "cover": "covers/brotopia-chang.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-07"
   }
 ]
