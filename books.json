@@ -1102,5 +1102,26 @@
     "cover": "covers/logic-key-concepts-in-philosophy-goldstein.jpg",
     "shelf": "marinating",
     "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "The Will to Believe and Other Essays in Popular Philosophy, and Human Immortality",
+    "author": "William James",
+    "cover": "covers/the-will-to-believe-james.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-09"
+  },
+  {
+    "title": "Critique of Judgment",
+    "author": "Immanuel Kant",
+    "cover": "covers/critique-of-judgment-kant.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-09"
+  },
+  {
+    "title": "The Main Philosophical Writings and the Novel Allwill",
+    "author": "Friedrich Heinrich Jacobi",
+    "cover": "covers/the-main-philosophical-writings-and-the-novel-allwill-jacobi.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-09"
   }
 ]
