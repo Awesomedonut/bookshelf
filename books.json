@@ -1043,5 +1043,64 @@
     "cover": "covers/the-poet-empress-tao.jpg",
     "shelf": "want-to-read",
     "dateAdded": "2026-04-07"
+  },
+  {
+    "title": "A Short History of the Ancient World",
+    "author": "Nicholas K. Rauh",
+    "cover": "covers/a-short-history-of-the-ancient-world-rauh.jpg",
+    "shelf": "marinating",
+    "comment": "lots of great pics (in colour!!), great quality page material, lots of cool charts. interesting bit on scholar gentry & gentlemen",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "An Atlas of Countries That Don't Exist",
+    "author": "Nick Middleton",
+    "cover": "covers/an-atlas-of-countries-that-dont-exist-middleton.jpg",
+    "shelf": "marinating",
+    "comment": "genuinely one of the coolest books ive ever seen; the formatting & physical design are SO cool and the subject matter is fascinating",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "Read the Face",
+    "author": "Eric Standop",
+    "cover": "covers/read-the-face-standop.jpg",
+    "shelf": "marinating",
+    "comment": "pg 37 chinese face reading",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "Philosophy of Existence",
+    "author": "Karl Jaspers",
+    "cover": "covers/philosophy-of-existence-jaspers.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "Style: Lessons in Clarity and Grace",
+    "author": "Joseph M. Williams",
+    "cover": "covers/style-lessons-in-clarity-and-grace-williams.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "Essay on Transcendental Philosophy",
+    "author": "Salomon Maimon",
+    "cover": "covers/essay-on-transcendental-philosophy-maimon.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "Writing Philosophy",
+    "author": "Lewis Vaughn",
+    "cover": "covers/writing-philosophy-vaughn.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-08"
+  },
+  {
+    "title": "Logic: Key Concepts in Philosophy",
+    "author": "Laurence Goldstein",
+    "cover": "covers/logic-key-concepts-in-philosophy-goldstein.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-08"
   }
 ]
