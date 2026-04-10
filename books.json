@@ -1123,5 +1123,12 @@
     "cover": "covers/the-main-philosophical-writings-and-the-novel-allwill-jacobi.jpg",
     "shelf": "marinating",
     "dateAdded": "2026-04-09"
+  },
+  {
+    "title": "Pensées",
+    "author": "Blaise Pascal",
+    "cover": "covers/pensees-pascal.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-09"
   }
 ]
