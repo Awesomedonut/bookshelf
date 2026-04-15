@@ -74,7 +74,7 @@ export function createShelfSection(shelf, books, staggerOffset) {
   return { element: section, bookCount: booksOnShelf.length };
 }
 
-export function createBookCard(book, index) {
+function createBookCard(book, index) {
   const isCover = book.showCover;
   const card = document.createElement('div');
   card.className = `book${book.starred ? ' starred' : ''}${isCover ? '' : ' spine-view'}`;

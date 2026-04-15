@@ -5,11 +5,10 @@ import { fetchBooks, createShelfSection, SHELVES } from './books.js';
 const shelvesContainer = document.getElementById('shelves');
 const themeToggle = document.getElementById('theme-toggle');
 const searchInput = document.getElementById('search-input');
+const bookCounter = document.getElementById('book-counter');
 const particleContainer = document.querySelector('.particles');
 
 let allBooks = [];
-
-// ── initialization ────────────────────────────────────
 
 async function initialize() {
   applyTheme(getCurrentTheme());
@@ -19,7 +18,7 @@ async function initialize() {
   try {
     allBooks = await fetchBooks();
   } catch {
-    showError("couldn't load books.json :(");
+    shelvesContainer.innerHTML = `<p class="empty-msg">couldn't load books.json :(</p>`;
     return;
   }
 
@@ -27,8 +26,6 @@ async function initialize() {
   updateCounter(allBooks);
   populateParticles(particleContainer);
 }
-
-// ── shelf rendering ───────────────────────────────────
 
 function renderAllShelves(books) {
   shelvesContainer.innerHTML = '';
@@ -40,8 +37,6 @@ function renderAllShelves(books) {
     staggerOffset += bookCount;
   });
 }
-
-// ── search ────────────────────────────────────────────
 
 function setupSearch() {
   searchInput.addEventListener('input', () => {
@@ -62,15 +57,12 @@ function setupSearch() {
 }
 
 function updateCounter(shown, total) {
-  const counter = document.getElementById('book-counter');
   if (total && shown.length !== total) {
-    counter.textContent = `${shown.length} of ${total} books`;
+    bookCounter.textContent = `${shown.length} of ${total} books`;
   } else {
-    counter.textContent = `${shown.length} book${shown.length === 1 ? '' : 's'}`;
+    bookCounter.textContent = `${shown.length} book${shown.length === 1 ? '' : 's'}`;
   }
 }
-
-// ── event setup ───────────────────────────────────────
 
 function setupThemeToggle() {
   themeToggle.addEventListener('click', () => {
@@ -79,13 +71,5 @@ function setupThemeToggle() {
     refreshParticles(particleContainer);
   });
 }
-
-// ── error display ─────────────────────────────────────
-
-function showError(message) {
-  shelvesContainer.innerHTML = `<p class="empty-msg">${message}</p>`;
-}
-
-// ── start ─────────────────────────────────────────────
 
 initialize();
