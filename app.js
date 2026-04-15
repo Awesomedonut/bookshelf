@@ -4,30 +4,34 @@ import { fetchBooks, createShelfSection, SHELVES } from './books.js';
 
 const shelvesContainer = document.getElementById('shelves');
 const themeToggle = document.getElementById('theme-toggle');
+const searchInput = document.getElementById('search-input');
 const particleContainer = document.querySelector('.particles');
+
+let allBooks = [];
 
 // ── initialization ────────────────────────────────────
 
 async function initialize() {
   applyTheme(getCurrentTheme());
   setupThemeToggle();
+  setupSearch();
 
-  let books;
   try {
-    books = await fetchBooks();
+    allBooks = await fetchBooks();
   } catch {
     showError("couldn't load books.json :(");
     return;
   }
 
-  renderAllShelves(books);
-  document.getElementById('book-counter').textContent = `${books.length} book${books.length === 1 ? '' : 's'}`;
+  renderAllShelves(allBooks);
+  updateCounter(allBooks);
   populateParticles(particleContainer);
 }
 
 // ── shelf rendering ───────────────────────────────────
 
 function renderAllShelves(books) {
+  shelvesContainer.innerHTML = '';
   let staggerOffset = 0;
 
   SHELVES.forEach(shelf => {
@@ -35,6 +39,35 @@ function renderAllShelves(books) {
     shelvesContainer.appendChild(element);
     staggerOffset += bookCount;
   });
+}
+
+// ── search ────────────────────────────────────────────
+
+function setupSearch() {
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) {
+      renderAllShelves(allBooks);
+      updateCounter(allBooks);
+      return;
+    }
+    const filtered = allBooks.filter(book =>
+      [book.title, book.author, book.comment, book.shelf]
+        .filter(Boolean)
+        .some(field => field.toLowerCase().includes(query))
+    );
+    renderAllShelves(filtered);
+    updateCounter(filtered, allBooks.length);
+  });
+}
+
+function updateCounter(shown, total) {
+  const counter = document.getElementById('book-counter');
+  if (total && shown.length !== total) {
+    counter.textContent = `${shown.length} of ${total} books`;
+  } else {
+    counter.textContent = `${shown.length} book${shown.length === 1 ? '' : 's'}`;
+  }
 }
 
 // ── event setup ───────────────────────────────────────

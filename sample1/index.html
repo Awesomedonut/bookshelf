@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>~ Donut's Book Nook ~ ★ Welcome! ★</title>
+<style>
+  /* ░░░ GeoCities '97 vibes ░░░ */
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    color: #ffff00;
+    background:
+      repeating-linear-gradient(45deg, #000044 0 20px, #000066 20px 40px);
+    background-attachment: fixed;
+    text-align: center;
+  }
+
+  .frame {
+    max-width: 760px;
+    margin: 24px auto;
+    padding: 0;
+    border: 6px ridge #ff00ff;
+    background: #c0c0c0;
+    color: #000080;
+  }
+
+  .titlebar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #fff;
+    text-align: left;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+    border-bottom: 2px solid #000;
+  }
+  .titlebar::before { content: "📖 "; }
+
+  marquee {
+    background: #ffff00;
+    color: #ff0000;
+    font-weight: bold;
+    border-top: 2px solid #ff00ff;
+    border-bottom: 2px solid #ff00ff;
+    padding: 6px 0;
+  }
+
+  h1 {
+    font-size: 42px;
+    margin: 16px 0 4px;
+    color: #ff00ff;
+    text-shadow:
+      2px 2px 0 #ffff00,
+      4px 4px 0 #00ffff,
+      6px 6px 0 #000;
+    letter-spacing: 1px;
+  }
+
+  .blink { animation: blink 1s steps(2,start) infinite; }
+  @keyframes blink { to { visibility: hidden; } }
+
+  .rainbow {
+    background: linear-gradient(90deg,#ff0000,#ff8800,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+
+  .stars { font-size: 18px; color: #ff00ff; }
+
+  hr.fancy {
+    border: 0;
+    height: 8px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='8'><rect width='16' height='8' fill='%23ff00ff'/><rect x='2' y='2' width='12' height='4' fill='%2300ffff'/></svg>") repeat-x;
+    margin: 16px 24px;
+  }
+
+  .nav {
+    background: #008080;
+    padding: 8px;
+    border: 2px inset #c0c0c0;
+    margin: 8px 24px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 13px;
+  }
+  .nav a {
+    color: #ffff00;
+    text-decoration: underline;
+    margin: 0 6px;
+  }
+  .nav a:visited { color: #ff80ff; }
+
+  .shelf {
+    margin: 24px 24px 12px;
+    border: 4px double #ff00ff;
+    background: #ffffe0;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .shelf h2 {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    color: #fff;
+    background: linear-gradient(to right, #800080, #ff00ff);
+    margin: -12px -12px 12px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-bottom: 2px solid #000;
+  }
+  .shelf h2::before { content: "📚 "; }
+
+  .books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .book {
+    background: #fff;
+    border: 2px outset #c0c0c0;
+    padding: 8px;
+    text-align: center;
+    color: #000080;
+    font-size: 12px;
+    transition: transform .15s;
+  }
+  .book:hover {
+    transform: rotate(-1deg) scale(1.04);
+    border-color: #ff00ff;
+    background: #ffffcc;
+  }
+  .book img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border: 1px solid #000;
+    image-rendering: pixelated;
+  }
+  .book .t { font-weight: bold; margin-top: 6px; color: #800080; }
+  .book .a { font-style: italic; }
+  .book .c {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 10px;
+    color: #444;
+    margin-top: 4px;
+  }
+  .book .star { color: #ffaa00; }
+
+  .construction {
+    margin: 16px;
+    padding: 10px;
+    background: #ffff00;
+    color: #000;
+    border: 4px dashed #ff0000;
+    font-weight: bold;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+  }
+
+  .counter {
+    display: inline-block;
+    font-family: "Courier New", monospace;
+    background: #000;
+    color: #00ff00;
+    padding: 4px 10px;
+    border: 2px inset #888;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+
+  .webring {
+    background: #000080;
+    color: #ffff00;
+    padding: 8px;
+    margin: 16px 24px;
+    border: 2px ridge #c0c0c0;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 11px;
+  }
+  .webring a { color: #00ffff; }
+
+  footer {
+    padding: 12px;
+    color: #fff;
+    font-size: 11px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="titlebar">DONUT'S BOOK NOOK — Netscape Navigator</div>
+
+  <marquee scrollamount="6">★彡 WELCOME TO MY HOMEPAGE!! 彡★ &nbsp;&nbsp; this site is best viewed in 800x600 &nbsp;&nbsp; ✿ sign my guestbook ✿ &nbsp;&nbsp; LAST UPDATED: APRIL 10, 2026 &nbsp;&nbsp; ♥ ♥ ♥</marquee>
+
+  <h1>~ My Book Nook ~</h1>
+  <div class="stars">✦ ✧ ✦ <span class="rainbow">a totally rad list of books</span> ✦ ✧ ✦</div>
+  <p class="blink" style="color:#ff0000;font-weight:bold;">★ NEW!! ★ updated for 1997 ★</p>
+
+  <div class="nav">
+    [ <a href="#">Home</a> | <a href="#">About Me</a> | <a href="#">Books</a> | <a href="#">Guestbook</a> | <a href="#">Links</a> | <a href="mailto:donut@aol.com">E-mail</a> ]
+  </div>
+
+  <div class="construction">
+    🚧 UNDER CONSTRUCTION 🚧 &nbsp;&nbsp; please excuse the mess while i build this page!! 🚧
+  </div>
+
+  <hr class="fancy">
+
+  <div id="shelves"></div>
+
+  <hr class="fancy">
+
+  <div class="webring">
+    ✦ <b>The Bookworm Webring</b> ✦ <br>
+    [ <a href="#">« Prev</a> ] [ <a href="#">Random</a> ] [ <a href="#">List Sites</a> ] [ <a href="#">Next »</a> ]
+  </div>
+
+  <p>You are visitor # <span class="counter">0001337</span> since 04/10/96</p>
+
+  <footer>
+    © 1997 Donut's Book Nook · made with NotePad ✎ · <span class="blink">★</span> best viewed in Netscape 3.0 <span class="blink">★</span><br>
+    this page is hosted on GeoCities :: Athens / Acropolis / 7842
+  </footer>
+</div>
+
+<script>
+const SHELVES = [
+  { id: 'currently-reading', label: 'Currently Reading' },
+  { id: 'read', label: 'Read' },
+  { id: 'want-to-read', label: 'Want to Read' },
+  { id: 'marinating', label: 'Skimmed & For Later' },
+  { id: 'on-hold', label: 'On Hold' },
+];
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s ?? ''; return d.innerHTML; }
+
+fetch('../books.json').then(r => r.json()).then(books => {
+  const root = document.getElementById('shelves');
+  SHELVES.forEach(shelf => {
+    const items = books.filter(b => b.shelf === shelf.id).slice(0, 3);
+    if (!items.length) return;
+    const sec = document.createElement('div');
+    sec.className = 'shelf';
+    sec.innerHTML = `<h2>${shelf.label}</h2><div class="books">${items.map(b => `
+      <div class="book">
+        <img src="../${esc(b.cover)}" alt="${esc(b.title)}">
+        <div class="t">${b.starred ? '<span class="star">★</span> ' : ''}${esc(b.title)}</div>
+        <div class="a">by ${esc(b.author)}</div>
+        ${b.comment ? `<div class="c">"${esc(b.comment)}"</div>` : ''}
+      </div>`).join('')}</div>`;
+    root.appendChild(sec);
+  });
+});
+</script>
+</body>
+</html>

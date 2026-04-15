@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>♡ donut's book diary ♡ ✿ welcome ✿</title>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Pixelify+Sans&display=swap" rel="stylesheet">
+<style>
+  /* ✿ kawaii blog era ~ circa 2004 ✿ */
+
+  body {
+    margin: 0;
+    font-family: 'Tahoma', 'Gaegu', sans-serif;
+    font-size: 12px;
+    color: #6a3a5e;
+    background:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><text x='4' y='16' font-size='14' fill='%23ffd4e8'>♡</text><text x='22' y='34' font-size='10' fill='%23ffe1f0'>✿</text></svg>") repeat,
+      #fff5fa;
+    background-attachment: fixed;
+  }
+
+  /* center column */
+  .page {
+    max-width: 720px;
+    margin: 18px auto;
+    padding: 0;
+  }
+
+  /* header banner */
+  .banner {
+    border: 2px dashed #ff8ab8;
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px 22px 14px;
+    text-align: center;
+    box-shadow: 0 0 0 6px #ffe1f0, 0 4px 0 #ffb6d3;
+    position: relative;
+  }
+  .banner::before, .banner::after {
+    content: "✿";
+    position: absolute;
+    top: -10px;
+    font-size: 24px;
+    color: #ff8ab8;
+  }
+  .banner::before { left: 14px; }
+  .banner::after  { right: 14px; }
+
+  h1 {
+    font-family: 'Pixelify Sans', 'Tahoma', sans-serif;
+    font-size: 34px;
+    margin: 4px 0 2px;
+    color: #ff5599;
+    text-shadow: 2px 2px 0 #ffd4e8, 3px 3px 0 #fff;
+    letter-spacing: 1px;
+  }
+  .banner .sub {
+    font-size: 12px;
+    color: #aa6688;
+    font-style: italic;
+  }
+  .kaomoji {
+    font-family: 'Tahoma', sans-serif;
+    color: #ff5599;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  /* nav pills */
+  .nav {
+    text-align: center;
+    margin: 12px 0;
+  }
+  .nav a {
+    display: inline-block;
+    background: #ffd4e8;
+    color: #6a3a5e;
+    text-decoration: none;
+    border: 1px solid #ff8ab8;
+    border-radius: 999px;
+    padding: 3px 12px;
+    margin: 2px;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 2px 0 #ff8ab8;
+  }
+  .nav a:hover {
+    background: #fff;
+    color: #ff5599;
+  }
+  .nav a::before { content: "♡ "; }
+
+  /* two-col layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  /* sidebar */
+  .side .card {
+    background: #fff;
+    border: 1px solid #ffb6d3;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 0 #ffd4e8;
+  }
+  .side .card-title {
+    background: #ffe1f0;
+    color: #c43c7a;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-bottom: 1px dashed #ffb6d3;
+  }
+  .side .card-title::before { content: "❀ "; }
+  .side .card-body {
+    padding: 8px 10px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .side .card-body a {
+    color: #c43c7a;
+    text-decoration: none;
+    display: block;
+    padding: 1px 0;
+  }
+  .side .card-body a::before { content: "♡ "; color: #ff8ab8; }
+  .side .card-body a:hover { color: #ff5599; text-decoration: underline; }
+
+  .mood {
+    text-align: center;
+    font-size: 11px;
+  }
+  .mood-face { font-size: 22px; display: block; margin-bottom: 4px; }
+
+  .visitors {
+    text-align: center;
+    font-family: 'Pixelify Sans', monospace;
+    background: #ffe1f0;
+    color: #c43c7a;
+    border: 1px dashed #ff8ab8;
+    border-radius: 6px;
+    padding: 4px;
+    letter-spacing: 2px;
+  }
+
+  /* main shelves */
+  .main { min-width: 0; }
+
+  .shelf {
+    background: #fff;
+    border: 2px dotted #ffb6d3;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 3px 0 #ffd4e8;
+    position: relative;
+  }
+  .shelf-title {
+    font-family: 'Pixelify Sans', Tahoma, sans-serif;
+    font-size: 18px;
+    color: #ff5599;
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px dotted #ffd4e8;
+  }
+  .shelf-title::before { content: "✿ "; }
+  .shelf-title .count {
+    float: right;
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    color: #aa6688;
+    background: #ffe1f0;
+    border-radius: 999px;
+    padding: 1px 8px;
+    border: 1px solid #ffb6d3;
+  }
+
+  .books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .book {
+    background: #fff8fc;
+    border: 1px solid #ffb6d3;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    transition: transform .15s ease, box-shadow .15s ease;
+    position: relative;
+  }
+  .book:hover {
+    transform: translateY(-3px) rotate(-1deg);
+    box-shadow: 0 4px 0 #ffd4e8;
+    background: #fff;
+  }
+  .book img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ff8ab8;
+    box-shadow: 2px 2px 0 #ffd4e8;
+  }
+  .book .t {
+    font-weight: bold;
+    color: #c43c7a;
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+  .book .a {
+    font-style: italic;
+    color: #aa6688;
+    font-size: 10px;
+  }
+  .book .c {
+    font-size: 10px;
+    color: #6a3a5e;
+    margin-top: 4px;
+    background: #ffe1f0;
+    border-radius: 6px;
+    padding: 4px 6px;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .book .c::before { content: "✎ "; color: #ff5599; }
+  .star {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #fff5a8;
+    color: #d4a418;
+    border: 1px solid #d4a418;
+    border-radius: 50%;
+    width: 22px; height: 22px;
+    line-height: 20px;
+    font-size: 13px;
+    box-shadow: 0 2px 0 #d4a418;
+  }
+
+  /* footer */
+  .footer {
+    text-align: center;
+    margin: 16px 0 24px;
+    font-size: 11px;
+    color: #aa6688;
+  }
+  .footer .sparkle { color: #ff5599; }
+  .footer a { color: #c43c7a; }
+
+  .blinkie {
+    display: inline-block;
+    background: #ff5599;
+    color: #fff;
+    font-family: 'Pixelify Sans', monospace;
+    font-size: 10px;
+    padding: 2px 8px;
+    border: 2px solid #fff;
+    outline: 1px solid #ff5599;
+    margin: 2px;
+  }
+  .blinkie.alt { background: #ffd4e8; color: #c43c7a; outline-color: #ffb6d3; }
+
+  @keyframes wiggle {
+    0%,100% { transform: rotate(-2deg); }
+    50%     { transform: rotate(2deg); }
+  }
+  .wiggle { display: inline-block; animation: wiggle 1.6s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="banner">
+    <div class="kaomoji wiggle">⊹˚. ♡ ⋆｡ﾟ✿</div>
+    <h1>donut's book diary</h1>
+    <div class="sub">a tiny pink corner of the web for the books i love (｡♥‿♥｡)</div>
+    <div class="kaomoji">last updated: 04 / 10 / 26  ✿  mood: <b>cozy</b></div>
+  </div>
+
+  <div class="nav">
+    <a href="#">home</a>
+    <a href="#">about me</a>
+    <a href="#">books</a>
+    <a href="#">diary</a>
+    <a href="#">graphics</a>
+    <a href="#">guestbook</a>
+    <a href="#">link me</a>
+  </div>
+
+  <div class="layout">
+
+    <aside class="side">
+      <div class="card">
+        <div class="card-title">about me</div>
+        <div class="card-body">
+          <b>name:</b> donut<br>
+          <b>age:</b> ageless<br>
+          <b>likes:</b> books, tea, soft pink things<br>
+          <b>currently:</b> reading by the window
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">today's mood</div>
+        <div class="card-body mood">
+          <span class="mood-face">(｡◕‿◕｡)</span>
+          sleepy &amp; reading
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">my shelves</div>
+        <div class="card-body" id="sidebar-shelves"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">visitors</div>
+        <div class="card-body">
+          <div class="visitors">0001337</div>
+          <div style="text-align:center;margin-top:4px;color:#aa6688;">since 2004 ♡</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">link me!</div>
+        <div class="card-body" style="text-align:center;">
+          <span class="blinkie">★ donut's diary ★</span>
+          <span class="blinkie alt">♡ books ♡</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main" id="shelves"></main>
+
+  </div>
+
+  <div class="footer">
+    <span class="sparkle">⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</span><br>
+    made with love &amp; pink pixels ♡ best viewed in 1024×768<br>
+    © 2004 donut's book diary · <a href="#">sign my guestbook</a> · <a href="mailto:donut@hotmail.com">e-mail me</a>
+  </div>
+</div>
+
+<script>
+const SHELVES = [
+  { id: 'currently-reading', label: 'currently reading' },
+  { id: 'read', label: 'finished ♡' },
+  { id: 'want-to-read', label: 'wishlist' },
+  { id: 'marinating', label: 'skimmed & for later' },
+  { id: 'on-hold', label: 'on hold' },
+];
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s ?? ''; return d.innerHTML; }
+
+fetch('../books.json').then(r => r.json()).then(books => {
+  const root = document.getElementById('shelves');
+  const sidebar = document.getElementById('sidebar-shelves');
+
+  SHELVES.forEach(shelf => {
+    const all = books.filter(b => b.shelf === shelf.id);
+    const items = all.slice(0, 3);
+    if (!all.length) return;
+
+    sidebar.innerHTML += `<a href="#${shelf.id}">${esc(shelf.label)} (${all.length})</a>`;
+
+    const sec = document.createElement('section');
+    sec.className = 'shelf';
+    sec.id = shelf.id;
+    sec.innerHTML = `
+      <h2 class="shelf-title">${esc(shelf.label)} <span class="count">${all.length}</span></h2>
+      <div class="books">
+        ${items.map(b => `
+          <div class="book">
+            ${b.starred ? '<div class="star">★</div>' : ''}
+            <img src="../${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy">
+            <div class="t">${esc(b.title)}</div>
+            <div class="a">by ${esc(b.author)}</div>
+            ${b.comment ? `<div class="c">${esc(b.comment)}</div>` : ''}
+          </div>`).join('')}
+      </div>
+    `;
+    root.appendChild(sec);
+  });
+});
+</script>
+</body>
+</html>

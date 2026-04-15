@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BOOKSHELF.BBS :: connected @ 14400 baud</title>
+<style>
+  /* ░▒▓ BBS / Terminal vibes ▓▒░ */
+  @import url('https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #00ff66;
+    font-family: 'VT323', 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 20px;
+    line-height: 1.25;
+    min-height: 100vh;
+  }
+
+  /* CRT scanlines + flicker */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0 2px,
+      rgba(0,0,0,0.18) 2px 4px
+    );
+    z-index: 9999;
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.7) 100%);
+    z-index: 9998;
+  }
+
+  .crt {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px 28px 60px;
+    text-shadow: 0 0 4px rgba(0,255,102,0.55), 0 0 12px rgba(0,255,102,0.25);
+    animation: flicker 6s infinite;
+  }
+  @keyframes flicker {
+    0%,100% { opacity: 1; }
+    97% { opacity: 0.96; }
+    97.5% { opacity: 0.85; }
+    98% { opacity: 1; }
+  }
+
+  pre.banner {
+    color: #00ff66;
+    font-size: 14px;
+    line-height: 1.05;
+    margin: 0;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .meta {
+    border-top: 1px dashed #00aa44;
+    border-bottom: 1px dashed #00aa44;
+    margin: 14px 0 22px;
+    padding: 6px 0;
+    color: #00cc55;
+  }
+  .meta span { margin-right: 18px; }
+  .amber { color: #ffb000; text-shadow: 0 0 6px rgba(255,176,0,0.5); }
+
+  .prompt::before {
+    content: "C:\\BOOKS> ";
+    color: #00aa44;
+  }
+
+  h2.shelf-head {
+    margin: 28px 0 6px;
+    font-size: 22px;
+    color: #00ff66;
+    font-weight: normal;
+  }
+  h2.shelf-head::before { content: ">>> "; color: #00aa44; }
+
+  .shelf-rule {
+    color: #00aa44;
+    margin: 0 0 10px;
+    letter-spacing: -1px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px dotted #006622;
+  }
+  .row:last-child { border-bottom: 1px dashed #00aa44; }
+
+  .ascii-cover {
+    width: 96px;
+    height: 132px;
+    background: #001100;
+    border: 1px solid #00aa44;
+    overflow: hidden;
+    position: relative;
+  }
+  .ascii-cover img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.4) brightness(0.9);
+    mix-blend-mode: screen;
+    opacity: 0.75;
+  }
+  .ascii-cover::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0,0,0,0.5) 2px 3px);
+    pointer-events: none;
+  }
+
+  .info { font-size: 19px; }
+  .field { color: #00aa44; }
+  .val   { color: #00ff66; }
+  .star  { color: #ffb000; }
+  .quote { color: #66ddaa; font-style: italic; }
+
+  .cursor {
+    display: inline-block;
+    width: 0.55em;
+    background: #00ff66;
+    color: #000;
+    animation: caret 1.05s steps(1) infinite;
+  }
+  @keyframes caret { 50% { background: transparent; color: #00ff66; } }
+
+  a, a:visited { color: #00ff66; }
+
+  .footer {
+    margin-top: 32px;
+    color: #00aa44;
+    font-size: 17px;
+  }
+</style>
+</head>
+<body>
+
+<div class="crt">
+
+<pre class="banner">
+ ____   ___   ___  _  __  ____  _   _  _____  _      _____
+| __ ) / _ \ / _ \| |/ / / ___|| | | || ____|| |    |  ___|
+|  _ \| | | | | | | ' /  \___ \| |_| ||  _|  | |    | |_
+| |_) | |_| | |_| | . \   ___) |  _  || |___ | |___ |  _|
+|____/ \___/ \___/|_|\_\ |____/|_| |_||_____||_____||_|
+
+           ░▒▓  T E R M I N A L   v 0 . 3 ▓▒░
+</pre>
+
+<div class="meta">
+  <span class="amber">[ CONNECTED ]</span>
+  <span>NODE: 04</span>
+  <span>USER: SYSOP</span>
+  <span>BAUD: 14400</span>
+  <span>SESSION: 00:23:14</span>
+</div>
+
+<p class="prompt">login as guest...<br>
+Welcome, traveler. Reticulating splines........... <span class="amber">OK</span><br>
+Loading <code>BOOKS.DAT</code>........... <span class="amber">OK</span><br>
+Type <span class="amber">HELP</span> for commands. Press any key to continue<span class="cursor">&nbsp;</span></p>
+
+<div id="shelves"></div>
+
+<p class="prompt">logoff<span class="cursor">&nbsp;</span></p>
+
+<div class="footer">
+  ─────────────────────────────────────────────────────────<br>
+  BOOKSHELF.BBS  ::  est. 1992  ::  no warez, just books<br>
+  press [ALT]+[H] for sysop  ::  carrier lost in 03:00:00<br>
+  ─────────────────────────────────────────────────────────
+</div>
+
+</div>
+
+<script>
+const SHELVES = [
+  { id: 'currently-reading', label: 'CURRENTLY READING' },
+  { id: 'read', label: 'READ' },
+  { id: 'want-to-read', label: 'WANT TO READ' },
+  { id: 'marinating', label: 'SKIMMED / FOR LATER' },
+  { id: 'on-hold', label: 'ON HOLD' },
+];
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s ?? ''; return d.innerHTML; }
+function rule(n=64) { return '─'.repeat(n); }
+
+fetch('../books.json').then(r => r.json()).then(books => {
+  const root = document.getElementById('shelves');
+  SHELVES.forEach(shelf => {
+    const items = books.filter(b => b.shelf === shelf.id).slice(0, 3);
+    if (!items.length) return;
+    const block = document.createElement('div');
+    block.innerHTML = `
+      <h2 class="shelf-head">${esc(shelf.label)}  [${items.length}]</h2>
+      <pre class="shelf-rule">${rule(72)}</pre>
+      ${items.map(b => `
+        <div class="row">
+          <div class="ascii-cover"><img src="../${esc(b.cover)}" alt=""></div>
+          <div class="info">
+            <div><span class="field">TITLE   :</span> <span class="val">${b.starred ? '<span class="star">[*]</span> ' : ''}${esc(b.title)}</span></div>
+            <div><span class="field">AUTHOR  :</span> <span class="val">${esc(b.author)}</span></div>
+            <div><span class="field">SHELF   :</span> <span class="val">${esc(shelf.label)}</span></div>
+            <div><span class="field">ADDED   :</span> <span class="val">${esc(b.dateAdded || 'unknown')}</span></div>
+            ${b.comment ? `<div><span class="field">NOTE    :</span> <span class="quote">"${esc(b.comment)}"</span></div>` : ''}
+          </div>
+        </div>`).join('')}
+    `;
+    root.appendChild(block);
+  });
+});
+</script>
+</body>
+</html>

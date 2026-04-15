@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>★彡 DONUT'S SUPER CUTE BOOK PAGE!! 彡★</title>
+<style>
+  /* ✿ AUTHENTIC 2001 SANRIO FANPAGE ENERGY ✿ */
+  /* no web fonts. system fonts only. centered. tables. */
+
+  body {
+    margin: 0;
+    padding: 10px 0;
+    font-family: "Comic Sans MS", "Marker Felt", Tahoma, sans-serif;
+    font-size: 11px;
+    color: #aa0044;
+    text-align: center;
+    background:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><text x='2' y='12' font-size='13' fill='%23ff66aa'>♥</text><text x='14' y='24' font-size='11' fill='%23ffcc00'>★</text><text x='2' y='26' font-size='10' fill='%23ff0066'>✿</text><text x='16' y='12' font-size='10' fill='%2300aaff'>♥</text></svg>") repeat,
+      #ffeef5;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><text y='14' font-size='14'>♥</text></svg>") 4 4, auto;
+  }
+
+  /* MARQUEE BAR */
+  .topmarquee {
+    background: #ffcc00;
+    color: #ff0066;
+    border: 3px solid #ff0066;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 3px 0;
+    margin-bottom: 10px;
+  }
+
+  /* outermost shell */
+  table.shell {
+    margin: 0 auto;
+    border: 4px solid #ff0066;
+    border-collapse: separate;
+    background: #fff;
+    border-spacing: 0;
+  }
+  table.shell > tbody > tr > td { padding: 0; vertical-align: top; }
+
+  /* Header band */
+  .head {
+    width: 740px;
+    background: #ff0066;
+    border-bottom: 4px solid #ffcc00;
+    padding: 10px 0 12px;
+    text-align: center;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><text x='3' y='15' font-size='13' fill='%23ffffff' opacity='0.4'>★</text><text x='17' y='27' font-size='11' fill='%23ffffff' opacity='0.4'>♥</text></svg>");
+  }
+
+  /* WORDART title via per-letter spans */
+  .title {
+    font-family: "Comic Sans MS", "Marker Felt", sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 4px 0;
+    letter-spacing: -1px;
+  }
+  .title span {
+    display: inline-block;
+    text-shadow:
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff,
+       3px  3px 0 #aa0044,
+       4px  4px 0 #ffcc00,
+       5px  5px 0 #00aaff;
+  }
+  .title .c1 { color: #ff0066; transform: rotate(-4deg); }
+  .title .c2 { color: #ffcc00; transform: rotate( 3deg); }
+  .title .c3 { color: #00aaff; transform: rotate(-2deg); }
+  .title .c4 { color: #ff66aa; transform: rotate( 4deg); }
+  .title .c5 { color: #aa44ff; transform: rotate(-3deg); }
+
+  .head .sub {
+    color: #fff;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 13px;
+    text-shadow: 1px 1px 0 #aa0044, 2px 2px 0 #ffcc00;
+    margin-top: 6px;
+  }
+
+  /* nav strip */
+  .navbar {
+    width: 740px;
+    background: #ffcc00;
+    border-bottom: 4px solid #ff0066;
+    padding: 4px 0;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .navbar a {
+    color: #ff0066;
+    text-decoration: none;
+    margin: 0 4px;
+    background: #fff;
+    border: 2px solid #ff0066;
+    padding: 1px 8px;
+    display: inline-block;
+  }
+  .navbar a:hover { background: #ff0066; color: #ffcc00; }
+
+  /* layout */
+  .layout {
+    width: 740px;
+    background: #fff;
+  }
+  table.cols {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table.cols > tbody > tr > td { vertical-align: top; padding: 8px; }
+  td.side { width: 170px; background: #fff5fa; border-right: 3px dashed #ff66aa; }
+  td.main { background: #fff; }
+
+  /* sidebar widgets — clashing colors on purpose */
+  .w {
+    background: #fff;
+    border: 3px solid #ff0066;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+  .w h3 {
+    margin: 0;
+    background: #ff0066;
+    color: #ffcc00;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 12px;
+    text-shadow: 1px 1px 0 #aa0044;
+    padding: 3px 6px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .w .b {
+    padding: 6px 8px;
+    font-size: 11px;
+    color: #aa0044;
+    line-height: 1.5;
+    font-family: "Comic Sans MS", sans-serif;
+  }
+  .w.alt { border-color: #00aaff; }
+  .w.alt h3 { background: #00aaff; color: #fff; text-shadow: 1px 1px 0 #006688; }
+  .w.alt2 { border-color: #aa44ff; }
+  .w.alt2 h3 { background: #aa44ff; color: #ffcc00; text-shadow: 1px 1px 0 #4a1a7e; }
+  .w.alt3 { border-color: #ffcc00; }
+  .w.alt3 h3 { background: #ffcc00; color: #ff0066; text-shadow: 1px 1px 0 #fff; }
+
+  .w .b a {
+    color: #ff0066;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 1px 0;
+  }
+  .w .b a::before { content: "♥ "; color: #ffcc00; }
+  .w .b a:hover { color: #00aaff; text-decoration: underline; }
+
+  /* pet */
+  .petart {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.05;
+    white-space: pre;
+    color: #ff0066;
+    background: #ffffcc;
+    border: 2px solid #ffcc00;
+    padding: 4px 6px;
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* hit counter */
+  .hits {
+    font-family: "Courier New", monospace;
+    background: #000;
+    color: #00ff00;
+    border: 2px inset #888;
+    text-align: center;
+    padding: 2px 4px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  /* sticker collection */
+  .stickers {
+    font-size: 22px;
+    line-height: 1.1;
+    text-align: center;
+    padding: 4px 0;
+  }
+
+  /* stamps */
+  .stamp {
+    display: inline-block;
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 1px;
+    border: 1px dashed currentColor;
+    text-transform: uppercase;
+  }
+  .stamp.s1 { background: #ffcc00; color: #ff0066; }
+  .stamp.s2 { background: #ffeef5; color: #aa44ff; }
+  .stamp.s3 { background: #ccf0ff; color: #006688; }
+  .stamp.s4 { background: #ffcccc; color: #aa0044; }
+
+  /* welcome */
+  .welcome {
+    background: #ffffcc;
+    border: 3px dashed #ff0066;
+    padding: 8px 10px;
+    color: #aa0044;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .welcome b { color: #ff0066; }
+
+  /* fancy hr */
+  .fancyhr {
+    height: 18px;
+    margin: 12px 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='18'><text x='2' y='14' font-size='14' fill='%23ff0066'>♥</text><text x='12' y='14' font-size='14' fill='%23ffcc00'>★</text><text x='22' y='14' font-size='14' fill='%2300aaff'>♥</text></svg>") repeat-x center;
+  }
+
+  /* shelves */
+  .shelf {
+    margin-bottom: 14px;
+    background: #fff;
+    border: 3px solid #ff0066;
+  }
+  .shelf-head {
+    background: #ff0066;
+    color: #ffcc00;
+    text-shadow: 1px 1px 0 #aa0044, 2px 2px 0 #fff;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 16px;
+    padding: 4px 10px;
+    border-bottom: 3px solid #ffcc00;
+    text-align: left;
+  }
+  .shelf-head .count {
+    float: right;
+    background: #ffcc00;
+    color: #ff0066;
+    text-shadow: none;
+    border: 2px solid #fff;
+    outline: 2px solid #ff0066;
+    padding: 0 6px;
+    font-size: 11px;
+    margin-top: 3px;
+  }
+  .shelf:nth-of-type(2) { border-color: #00aaff; }
+  .shelf:nth-of-type(2) .shelf-head { background: #00aaff; border-bottom-color: #ffcc00; color: #fff; text-shadow: 1px 1px 0 #006688, 2px 2px 0 #fff; }
+  .shelf:nth-of-type(3) { border-color: #aa44ff; }
+  .shelf:nth-of-type(3) .shelf-head { background: #aa44ff; border-bottom-color: #ffcc00; color: #ffcc00; text-shadow: 1px 1px 0 #4a1a7e, 2px 2px 0 #fff; }
+  .shelf:nth-of-type(4) { border-color: #ffcc00; }
+  .shelf:nth-of-type(4) .shelf-head { background: #ffcc00; border-bottom-color: #ff0066; color: #ff0066; text-shadow: 1px 1px 0 #fff, 2px 2px 0 #ff66aa; }
+  .shelf:nth-of-type(5) { border-color: #00aa66; }
+  .shelf:nth-of-type(5) .shelf-head { background: #00aa66; border-bottom-color: #ffcc00; color: #ffcc00; text-shadow: 1px 1px 0 #004422, 2px 2px 0 #fff; }
+
+  table.bookrow {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table.bookrow td {
+    width: 33.33%;
+    vertical-align: top;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .bk {
+    border: 3px ridge #ff66aa;
+    background: #fffafd;
+    padding: 6px;
+    position: relative;
+  }
+  .bk img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border: 2px solid #ff0066;
+  }
+  .bk .t {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 12px;
+    color: #ff0066;
+    margin-top: 5px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .bk .a {
+    font-family: "Comic Sans MS", sans-serif;
+    font-style: italic;
+    color: #aa44ff;
+    font-size: 10px;
+  }
+  .bk .c {
+    background: #ffffcc;
+    border: 1px dashed #ff66aa;
+    padding: 4px 5px;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #aa0044;
+    text-align: left;
+    font-family: "Comic Sans MS", sans-serif;
+    line-height: 1.35;
+  }
+  .bk .c::before { content: "♥ "; color: #ff0066; }
+  .bk .star {
+    position: absolute;
+    top: -10px; right: -8px;
+    font-size: 26px;
+    color: #ffcc00;
+    text-shadow: 1px 1px 0 #ff0066, -1px -1px 0 #ff0066, 1px -1px 0 #ff0066, -1px 1px 0 #ff0066;
+  }
+
+  /* footer */
+  .foot {
+    width: 740px;
+    background: #ff0066;
+    border-top: 4px solid #ffcc00;
+    color: #ffcc00;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 11px;
+    padding: 8px 10px;
+    text-align: center;
+    text-shadow: 1px 1px 0 #aa0044;
+  }
+  .foot a { color: #fff; }
+
+  /* webring */
+  .webring {
+    background: #ffeef5;
+    border: 3px dashed #ff0066;
+    margin: 10px 0;
+    padding: 6px;
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 11px;
+    color: #aa0044;
+  }
+  .webring b { color: #ff0066; font-size: 13px; }
+  .webring a {
+    color: #00aaff;
+    font-weight: bold;
+    margin: 0 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="topmarquee">
+  <marquee scrollamount="6">★彡 WELCOME TO DONUT'S SUPER CUTE BOOK PAGE!! ♥ PLEASE SIGN MY GUESTBOOK!! ♥ BEST VIEWED IN 800x600 ♥ LAST UPDATED: 04/10/2001 ♥ DONT FORGET TO ADOPT A KITTY!! ♥ 彡★</marquee>
+</div>
+
+<table class="shell"><tbody>
+
+<tr><td>
+  <div class="head">
+    <div class="title">
+      <span class="c1">♥</span>
+      <span class="c2">D</span><span class="c3">O</span><span class="c4">N</span><span class="c5">U</span><span class="c1">T</span><span class="c2">'</span><span class="c3">S</span>
+      &nbsp;
+      <span class="c4">B</span><span class="c5">O</span><span class="c1">O</span><span class="c2">K</span>
+      &nbsp;
+      <span class="c3">P</span><span class="c4">A</span><span class="c5">G</span><span class="c1">E</span>
+      <span class="c2">♥</span>
+    </div>
+    <div class="sub">★ a super kawaii lil shrine for all my favorite books ★</div>
+  </div>
+</td></tr>
+
+<tr><td>
+  <div class="navbar">
+    <a href="#">★ home</a>
+    <a href="#">♥ about me</a>
+    <a href="#">✿ books</a>
+    <a href="#">♪ diary</a>
+    <a href="#">★ stickers</a>
+    <a href="#">♥ guestbook</a>
+    <a href="#">✉ e-mail</a>
+  </div>
+</td></tr>
+
+<tr><td>
+<div class="layout">
+<table class="cols"><tbody><tr>
+
+  <td class="side">
+
+    <div class="w">
+      <h3>♥ ABOUT ME ♥</h3>
+      <div class="b" style="text-align:left;">
+        <b>name:</b> donut<br>
+        <b>age:</b> ageless ♥<br>
+        <b>fav book:</b> too many!!<br>
+        <b>fav drink:</b> milk tea<br>
+        <b>now:</b> reading by the window
+      </div>
+    </div>
+
+    <div class="w alt">
+      <h3>★ TODAY'S MOOD ★</h3>
+      <div class="b" style="text-align:center;">
+        <div style="font-size:24px;">(｡◕‿◕｡)</div>
+        <b style="color:#00aaff;">cozy &amp; sleepy!!</b>
+      </div>
+    </div>
+
+    <div class="w alt2">
+      <h3>♪ ADOPT A KITTY ♪</h3>
+      <div class="b" style="text-align:center;">
+<div class="petart">  /\___/\
+ (= ^ω^ =)
+ (")_(")</div>
+        <div style="margin-top:4px;color:#aa44ff;font-weight:bold;">♥ MOCHI ♥</div>
+        <div style="font-size:9px;">click to feed!!</div>
+      </div>
+    </div>
+
+    <div class="w alt3">
+      <h3>✿ MY SHELVES ✿</h3>
+      <div class="b" id="sidebar-shelves" style="text-align:left;"></div>
+    </div>
+
+    <div class="w">
+      <h3>♥ STAMPS ♥</h3>
+      <div class="b" style="text-align:center;">
+        <span class="stamp s1">BOOKWORM</span>
+        <span class="stamp s2">SOFT GIRL</span>
+        <span class="stamp s3">TEA LOVER</span>
+        <span class="stamp s4">CAT MOM</span>
+        <span class="stamp s1">100% CUTE</span>
+      </div>
+    </div>
+
+    <div class="w alt">
+      <h3>★ STICKERS ★</h3>
+      <div class="b stickers">
+        ♥ ★ ✿ ♪ ☆<br>
+        ✦ ♡ ❀ ♥ ✰<br>
+        ★ ☁ ♬ ❀ ♡
+      </div>
+    </div>
+
+    <div class="w alt2">
+      <h3>♪ VISITORS ♪</h3>
+      <div class="b" style="text-align:center;">
+        <div class="hits">0001337</div>
+        <div style="font-size:9px;margin-top:3px;">since 04/14/2001 ♥</div>
+      </div>
+    </div>
+
+  </td>
+
+  <td class="main">
+
+    <div class="welcome">
+      <b>♥ HIIII WELCOME!! ♥</b><br>
+      you've found my super cute lil book page!! ★ this is where i write down EVERY book
+      i read so i don't forget them~ please look around &amp; sign my guestbook before you go,
+      okie?? ♥(˘▽˘)♥
+    </div>
+
+    <div class="webring">
+      <b>♥ THE BOOKWORM WEBRING ♥</b><br>
+      [ <a href="#">« prev</a> ] [ <a href="#">random</a> ] [ <a href="#">list sites</a> ] [ <a href="#">next »</a> ] [ <a href="#">join!</a> ]
+    </div>
+
+    <div class="fancyhr"></div>
+
+    <div id="shelves" style="text-align:left;"></div>
+
+    <div class="fancyhr"></div>
+
+    <div style="font-size:11px;color:#ff0066;font-family:'Comic Sans MS';">
+      ♥ thanks for visiting my page!! come back soon!! ♥<br>
+      <span style="color:#00aaff;">don't forget to <a href="#" style="color:#aa44ff;font-weight:bold;">SIGN MY GUESTBOOK</a>!!</span>
+    </div>
+
+  </td>
+
+</tr></tbody></table>
+</div>
+</td></tr>
+
+<tr><td>
+  <div class="foot">
+    ♥ © 2001 donut's book page ♥ best viewed in netscape 4.7 @ 800x600 ♥<br>
+    made with notepad &amp; lots of love &nbsp;★&nbsp;
+    <a href="#">sign guestbook</a> · <a href="mailto:donut@hotmail.com">e-mail me!!</a> · <a href="#">view source!</a>
+  </div>
+</td></tr>
+
+</tbody></table>
+
+<script>
+const SHELVES = [
+  { id: 'currently-reading', label: '♥ CURRENTLY READING' },
+  { id: 'read', label: '★ FINISHED!!' },
+  { id: 'want-to-read', label: '♪ WISHLIST' },
+  { id: 'marinating', label: '✿ SKIMMED &amp; FOR LATER' },
+  { id: 'on-hold', label: '☆ ON HOLD' },
+];
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s ?? ''; return d.innerHTML; }
+
+fetch('../books.json').then(r => r.json()).then(books => {
+  const root = document.getElementById('shelves');
+  const sidebar = document.getElementById('sidebar-shelves');
+
+  SHELVES.forEach(shelf => {
+    const all = books.filter(b => b.shelf === shelf.id);
+    const items = all.slice(0, 3);
+    if (!all.length) return;
+
+    sidebar.innerHTML += `<a href="#${shelf.id}">${shelf.label} (${all.length})</a>`;
+
+    const sec = document.createElement('div');
+    sec.className = 'shelf';
+    sec.id = shelf.id;
+
+    const cells = items.map(b => `
+      <td>
+        <div class="bk">
+          ${b.starred ? '<div class="star">★</div>' : ''}
+          <img src="../${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy">
+          <div class="t">${esc(b.title)}</div>
+          <div class="a">by ${esc(b.author)}</div>
+          ${b.comment ? `<div class="c">${esc(b.comment)}</div>` : ''}
+        </div>
+      </td>`).join('');
+
+    sec.innerHTML = `
+      <div class="shelf-head">${shelf.label} <span class="count">${all.length} books</span></div>
+      <table class="bookrow"><tbody><tr>${cells}</tr></tbody></table>
+    `;
+    root.appendChild(sec);
+  });
+});
+</script>
+</body>
+</html>
