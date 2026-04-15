@@ -52,7 +52,8 @@
     "cover": "covers/philosophy-probability-childers.jpg",
     "shelf": "marinating",
     "starred": true,
-    "dateAdded": "2026-04-06"
+    "dateAdded": "2026-04-06",
+    "showCover": true
   },
   {
     "title": "Queen Victoria and Her Prime Ministers",
@@ -75,7 +76,8 @@
     "cover": "covers/critical-thinking-hughes.jpg",
     "shelf": "marinating",
     "starred": true,
-    "dateAdded": "2026-04-06"
+    "dateAdded": "2026-04-06",
+    "showCover": true
   },
   {
     "title": "Ultimate Presentations",
@@ -91,7 +93,8 @@
     "cover": "covers/critical-reading-writing-wallace-wray.jpg",
     "shelf": "marinating",
     "starred": true,
-    "dateAdded": "2026-04-06"
+    "dateAdded": "2026-04-06",
+    "showCover": true
   },
   {
     "title": "Tractatus Logico-Philosophicus",
@@ -160,7 +163,8 @@
     "cover": "covers/orientalism-said.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "The Left Hand of Darkness",
@@ -294,7 +298,8 @@
     "cover": "covers/water-margin-shi.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "Journey to the West",
@@ -309,7 +314,8 @@
     "cover": "covers/dream-of-the-red-chamber-cao.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "The Book and the Sword",
@@ -331,7 +337,8 @@
     "cover": "covers/the-legend-of-the-condor-heroes-jin-yong.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "The Return of the Condor Heroes",
@@ -731,7 +738,8 @@
     "cover": "covers/women-writers-of-traditional-china-chang.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "Parable of the Sower",
@@ -823,7 +831,8 @@
     "cover": "covers/the-inner-quarters-ebrey.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "Teachers of the Inner Chambers",
@@ -831,7 +840,8 @@
     "cover": "covers/teachers-of-the-inner-chambers-ko.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "Precious Records",
@@ -839,7 +849,8 @@
     "cover": "covers/precious-records-mann.jpg",
     "shelf": "want-to-read",
     "starred": true,
-    "dateAdded": "2026-04-07"
+    "dateAdded": "2026-04-07",
+    "showCover": true
   },
   {
     "title": "The Shortest History of China",
@@ -1130,5 +1141,12 @@
     "cover": "covers/pensees-pascal.jpg",
     "shelf": "want-to-read",
     "dateAdded": "2026-04-09"
+  },
+  {
+    "title": "The Dialectic of Sex",
+    "author": "Shulamith Firestone",
+    "cover": "covers/the-dialectic-of-sex-firestone.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-14"
   }
 ]
