@@ -1155,5 +1155,59 @@
     "cover": "covers/china-the-worlds-oldest-living-civilization-revealed-makeham.jpg",
     "shelf": "marinating",
     "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Rise of the Chinese Empire",
+    "author": "Chun-shu Chang",
+    "cover": "covers/the-rise-of-the-chinese-empire-chang.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Wonders of Ancient Chinese Science",
+    "author": "Robert Silverberg",
+    "cover": "covers/wonders-of-ancient-chinese-science-silverberg.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Sources of Chinese Tradition",
+    "author": "Wm. Theodore de Bary",
+    "cover": "covers/sources-of-chinese-tradition-de-bary.jpg",
+    "shelf": "marinating",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Ancient Chinese Encyclopedia of Technology",
+    "author": "Jun Wenren",
+    "cover": "covers/ancient-chinese-encyclopedia-of-technology-wenren.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "T'ien-Kung K'ai-Wu: Chinese Technology in the Seventeenth Century",
+    "author": "Sung Ying-hsing",
+    "cover": "covers/tien-kung-kai-wu-sung.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "A Concise Illustrated History of Chinese Printing",
+    "author": "Luo Shubao",
+    "cover": "covers/concise-illustrated-history-of-chinese-printing-luo.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Technology, Gender and History in Imperial China",
+    "author": "Francesca Bray",
+    "cover": "covers/technology-gender-and-history-in-imperial-china-bray.jpg",
+    "shelf": "marinating",
+    "starred": true,
+    "dateAdded": "2026-04-16"
   }
 ]
