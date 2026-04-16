@@ -1209,5 +1209,47 @@
     "shelf": "marinating",
     "starred": true,
     "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "A Concise Manchu-English Lexicon",
+    "author": "Jerry Norman",
+    "cover": "covers/a-concise-manchu-english-lexicon-norman.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "A History of Russia, Central Asia and Mongolia, Volume I",
+    "author": "David Christian",
+    "cover": "covers/a-history-of-russia-central-asia-and-mongolia-christian.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Manchu Way: The Eight Banners and Ethnic Identity in Late Imperial China",
+    "author": "Mark C. Elliott",
+    "cover": "covers/the-manchu-way-elliott.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Manchu Princess, Japanese Spy",
+    "author": "Phyllis Birnbaum",
+    "cover": "covers/manchu-princess-japanese-spy-birnbaum.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "A World Trimmed with Fur: Wild Things, Pristine Places, and the Natural Fringes of Qing Rule",
+    "author": "Jonathan Schlesinger",
+    "cover": "covers/a-world-trimmed-with-fur-schlesinger.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Ethnic Minorities in Modern China",
+    "author": "Colin Mackerras",
+    "cover": "covers/ethnic-minorities-in-modern-china-mackerras.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
   }
 ]
