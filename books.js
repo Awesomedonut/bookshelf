@@ -75,7 +75,7 @@ export function createShelfSection(shelf, books, staggerOffset) {
 }
 
 function createBookCard(book, index) {
-  const isCover = book.showCover;
+  const isCover = book.showCover || book.starred;
   const card = document.createElement('div');
   card.className = `book${book.starred ? ' starred' : ''}${isCover ? '' : ' spine-view'}`;
   card.style.setProperty('--delay', `${index * ANIMATION_STAGGER_MS}ms`);
