@@ -1295,5 +1295,145 @@
     "cover": "covers/the-last-manchu-pu-yi.jpg",
     "shelf": "want-to-read",
     "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Philosophical Writing",
+    "author": "A.P. Martinich",
+    "cover": "covers/philosophical-writing-martinich.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Morning in the Burned House",
+    "author": "Margaret Atwood",
+    "cover": "covers/morning-in-the-burned-house-atwood.jpg",
+    "shelf": "on-hold",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Circle Game",
+    "author": "Margaret Atwood",
+    "cover": "covers/the-circle-game-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Power Politics",
+    "author": "Margaret Atwood",
+    "cover": "covers/power-politics-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Two-Headed Poems",
+    "author": "Margaret Atwood",
+    "cover": "covers/two-headed-poems-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Interlunar",
+    "author": "Margaret Atwood",
+    "cover": "covers/interlunar-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Dearly",
+    "author": "Margaret Atwood",
+    "cover": "covers/dearly-atwood.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Ariel: The Restored Edition",
+    "author": "Sylvia Plath",
+    "cover": "covers/ariel-plath.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Colossus and Other Poems",
+    "author": "Sylvia Plath",
+    "cover": "covers/the-colossus-and-other-poems-plath.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Collected Poems",
+    "author": "Sylvia Plath",
+    "cover": "covers/collected-poems-plath.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Winter Trees",
+    "author": "Sylvia Plath",
+    "cover": "covers/winter-trees-plath.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Twelfth Night",
+    "author": "William Shakespeare",
+    "cover": "covers/twelfth-night-shakespeare.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "As You Like It",
+    "author": "William Shakespeare",
+    "cover": "covers/as-you-like-it-shakespeare.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Merchant of Venice",
+    "author": "William Shakespeare",
+    "cover": "covers/the-merchant-of-venice-shakespeare.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Cymbeline",
+    "author": "William Shakespeare",
+    "cover": "covers/cymbeline-shakespeare.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Merry Wives of Windsor",
+    "author": "William Shakespeare",
+    "cover": "covers/the-merry-wives-of-windsor-shakespeare.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Romance of the Western Chamber",
+    "author": "Wang Shifu",
+    "cover": "covers/the-story-of-the-western-wing-wang-shifu.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Ballad of Mulan",
+    "author": "Song Nan Zhang",
+    "cover": "covers/the-ballad-of-mulan-zhang.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "cover": "covers/the-handmaids-tale-atwood.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Testaments",
+    "author": "Margaret Atwood",
+    "cover": "covers/the-testaments-atwood.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-16"
   }
 ]
