@@ -1435,5 +1435,75 @@
     "cover": "covers/the-testaments-atwood.jpg",
     "shelf": "read",
     "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Passion of New Eve",
+    "author": "Angela Carter",
+    "cover": "covers/the-passion-of-new-eve-carter.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Scythe",
+    "author": "Neal Shusterman",
+    "cover": "covers/scythe-shusterman.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Thunderhead",
+    "author": "Neal Shusterman",
+    "cover": "covers/thunderhead-shusterman.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Toll",
+    "author": "Neal Shusterman",
+    "cover": "covers/the-toll-shusterman.jpg",
+    "shelf": "read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Never Let Me Go",
+    "author": "Kazuo Ishiguro",
+    "cover": "covers/never-let-me-go-ishiguro.jpg",
+    "shelf": "on-hold",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Dispossessed",
+    "author": "Ursula K. Le Guin",
+    "cover": "covers/the-dispossessed-le-guin.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Waste Tide",
+    "author": "Chen Qiufan",
+    "cover": "covers/waste-tide-chen.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "Folding Beijing",
+    "author": "Hao Jingfang",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Female Man",
+    "author": "Joanna Russ",
+    "cover": "covers/the-female-man-russ.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "cover": "covers/the-hitchhikers-guide-to-the-galaxy-adams.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-16"
   }
 ]
