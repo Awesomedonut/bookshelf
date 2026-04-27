@@ -2,25 +2,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Book-O-Matic Shockwave Kiosk</title>
+<title>Book-O-Matic 3000 Prize Machine</title>
 <style>
-body{margin:0;background:#000;color:white;font-family:Arial Black,Impact,sans-serif;background-image:radial-gradient(circle at 50% 20%,#4422aa,#000 60%);padding:18px}
-.kiosk{width:900px;margin:auto;border:8px outset #aaa;background:#2b2b34;box-shadow:0 0 0 4px #000,14px 14px 0 #000}
-.chrome{background:linear-gradient(#fff,#7aa,#345,#fff);color:#001733;padding:10px;border-bottom:5px solid #111}.chrome h1{margin:0;font-size:34px;letter-spacing:2px}.badge{float:right;background:#ff0;color:#c00;border:4px outset #fff;padding:8px;transform:rotate(4deg)}
-.machine{display:grid;grid-template-columns:280px 1fr;gap:12px;padding:12px}.wheel{height:360px;background:#050517;border:5px inset #777;position:relative;overflow:hidden}
-.orbit{position:absolute;inset:40px;border:2px dashed #0ff;border-radius:50%;animation:spin 12s linear infinite}.orbit:nth-child(2){inset:82px;border-color:#f0f;animation-duration:8s}.orbit:nth-child(3){inset:126px;border-color:#ff0;animation-duration:5s}@keyframes spin{to{transform:rotate(360deg)}}
-.slot{position:absolute;left:42px;right:42px;bottom:28px;background:#111;border:4px inset #999;color:#0f0;font-family:"Courier New",monospace;text-align:center;padding:12px}
-.lever{margin-top:10px;background:#111;border:3px inset #777;padding:10px}.lever span{display:block;background:#c00;color:#fff;border:4px outset #f99;text-align:center;padding:12px;font-size:18px}
-.shelf{border:4px solid #0ff;background:#080820;margin-bottom:12px}.shelf h2{margin:0;background:linear-gradient(90deg,#0ff,#f0f,#ff0);color:#000;padding:6px 9px;font-size:17px;text-shadow:1px 1px #fff}.count{float:right}
-.books{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:9px}.book{background:#11114a;border:3px outset #77f;padding:7px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:11px}.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:3px solid #fff;box-shadow:0 0 10px #0ff}.t{color:#ff0;font-weight:bold;margin-top:5px}.a{color:#0ff}.c{font-size:10px;background:#000;border:1px solid #f0f;margin-top:5px;padding:4px;text-align:left}.star{color:#f0f}
+body{margin:0;background:#18002e;color:#fff;font-family:"Comic Sans MS",Tahoma,sans-serif;font-size:12px;background-image:radial-gradient(circle at 15% 20%,#ff4fd8 0 3px,transparent 4px),radial-gradient(circle at 80% 40%,#33f7ff 0 3px,transparent 4px),radial-gradient(circle at 40% 85%,#fff238 0 3px,transparent 4px);background-size:58px 58px;padding:18px}
+.arcade{width:900px;margin:auto;border:10px ridge #ff4fd8;background:#3b006b;box-shadow:0 0 0 6px #33f7ff,14px 14px 0 #080012}
+.marquee{text-align:center;background:linear-gradient(#fff238,#ff9d00);color:#7a001c;border-bottom:8px ridge #33f7ff;padding:10px;text-shadow:2px 2px #fff}
+.marquee h1{font-family:Impact,"Arial Black",sans-serif;font-size:48px;margin:0;letter-spacing:2px}.marquee .bulbs{font-size:19px;letter-spacing:8px;color:#ff006e;text-shadow:none;animation:blink .8s steps(2) infinite}@keyframes blink{50%{opacity:.25}}
+.machine{display:grid;grid-template-columns:330px 1fr;gap:12px;padding:12px}
+.cab{background:#ff4fd8;border:7px outset #ffd6f6;padding:10px;color:#18002e}
+.glass{height:330px;background:linear-gradient(160deg,rgba(255,255,255,.65),rgba(116,255,250,.25) 35%,rgba(36,0,70,.6));border:6px inset #ffd6f6;position:relative;overflow:hidden}
+.claw{position:absolute;left:128px;top:0;width:62px;height:94px;animation:claw 4s ease-in-out infinite}.cord{width:6px;height:48px;background:#222;margin:auto}.hand{text-align:center;font-size:36px;line-height:28px;color:#ddd;text-shadow:1px 1px #000}@keyframes claw{0%,100%{transform:translateX(-65px)}50%{transform:translateX(78px) translateY(34px)}}
+.capsule{position:absolute;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 25% 20%,#fff,#fff238 25%,#ff4fd8 70%);border:3px solid #fff;box-shadow:0 0 12px #fff;text-align:center;font-size:32px;line-height:72px}.c1{left:24px;bottom:26px}.c2{left:116px;bottom:54px;background:radial-gradient(circle at 25% 20%,#fff,#33f7ff 25%,#006eff 70%)}.c3{left:210px;bottom:22px;background:radial-gradient(circle at 25% 20%,#fff,#b6ff6b 25%,#00a651 70%)}.c4{left:62px;bottom:125px;background:radial-gradient(circle at 25% 20%,#fff,#ffb3ef 25%,#b200ff 70%)}.c5{left:190px;bottom:130px}
+.controls{margin-top:10px;background:#18002e;color:#fff;border:4px inset #ffd6f6;padding:8px;display:grid;grid-template-columns:1fr 95px;gap:8px;align-items:center}
+.joy{height:72px;background:#222;border:3px inset #777;position:relative}.stick{width:14px;height:42px;background:#ddd;position:absolute;left:50%;top:11px;transform:rotate(-18deg);transform-origin:bottom}.ball{width:34px;height:34px;border-radius:50%;background:#ff003c;position:absolute;left:45%;top:0;border:3px outset #ff9}
+.coin{background:#111;border:4px inset #777;text-align:center;color:#33f7ff;padding:11px 4px;font-family:"Courier New",monospace}
+.prize{background:#fff238;color:#7a001c;border:4px dashed #7a001c;text-align:center;font-weight:bold;margin-top:10px;padding:8px}
+.display{background:#140022;border:5px inset #33f7ff;padding:8px;min-height:565px}
+.ticket{background:#fff;color:#111;border:3px dashed #ff4fd8;margin-bottom:10px;padding:7px;font-family:"Courier New",monospace;text-align:center}
+.shelf{background:#250045;border:3px solid #33f7ff;margin-bottom:10px}.shelf h2{margin:0;background:#33f7ff;color:#140022;padding:5px 8px;font-size:17px;text-transform:uppercase}.count{float:right;color:#7a001c}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px}.book{background:#fff;color:#140022;border:3px outset #ffd6f6;padding:6px;text-align:center;position:relative}.book:before{content:"PRIZE";position:absolute;left:-5px;top:-8px;background:#ff003c;color:#fff;font-size:9px;padding:1px 4px;border:1px solid #fff;transform:rotate(-8deg)}
+.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:2px solid #140022}.t{font-weight:bold;color:#7a001c;margin-top:5px}.a{font-style:italic;color:#4b3366}.c{font-size:10px;background:#fff7bf;border:1px dotted #7a001c;margin-top:4px;padding:4px;text-align:left}.star{color:#ff003c}
 </style>
 </head>
 <body>
-<div class="kiosk"><div class="chrome"><span class="badge">SHOCKWAVE<br>READY</span><h1>Book-O-Matic 3000</h1>insert curiosity, pull lever, receive shelf portals</div><div class="machine"><aside><div class="wheel"><div class="orbit"></div><div class="orbit"></div><div class="orbit"></div><div class="slot">LOADING BOOK CARTRIDGES...</div></div><div class="lever"><span>PULL LEVER</span></div></aside><main id="shelves"></main></div></div>
+<div class="arcade">
+  <div class="marquee">
+    <div class="bulbs">● ● ● ● ● ● ● ● ● ● ●</div>
+    <h1>Book-O-Matic 3000</h1>
+    <div>three shelf prizes per grab - no refunds - no boring rectangles</div>
+  </div>
+  <div class="machine">
+    <aside class="cab">
+      <div class="glass">
+        <div class="claw"><div class="cord"></div><div class="hand">╲╱<br>╱╲</div></div>
+        <div class="capsule c1">📕</div><div class="capsule c2">📘</div><div class="capsule c3">📗</div><div class="capsule c4">★</div><div class="capsule c5">?</div>
+      </div>
+      <div class="controls">
+        <div class="joy"><div class="stick"></div><div class="ball"></div></div>
+        <div class="coin">25¢<br>INSERT</div>
+      </div>
+      <div class="prize">CURRENT PRIZE: BOOKS FROM THE STACKS</div>
+    </aside>
+    <main class="display">
+      <div class="ticket">CLAIM TICKET #0001337 / DISPENSING PREVIEW ITEMS ONLY</div>
+      <div id="shelves"></div>
+    </main>
+  </div>
+</div>
 <script>
-const SHELVES=[['currently-reading','Cartridge A: Now Playing'],['read','Cartridge B: Completed'],['want-to-read','Cartridge C: Wishlist'],['marinating','Cartridge D: Bonus Zone'],['on-hold','Cartridge E: Suspended']];
+const SHELVES=[['currently-reading','Grab Bag A: Now Reading'],['read','Grab Bag B: Finished'],['want-to-read','Grab Bag C: Wishlist'],['marinating','Grab Bag D: Mystery Maybe'],['on-hold','Grab Bag E: Jammed Chute']];
 function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
-fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div class="t">${b.starred?'<span class="star">◆</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt="${esc(b.title)}"><div class="t">${b.starred?'<span class="star">★</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
 </script>
 </body>
 </html>

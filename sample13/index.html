@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Madame Bibliotheca's Fortune Booth</title>
+<title>Book UNO Pop-Up Table</title>
 <style>
-body{margin:0;background:#1b001f;color:#ffe6a8;font-family:"Comic Sans MS",cursive;font-size:12px;background-image:radial-gradient(circle,#6b1a75 1px,transparent 2px);background-size:22px 22px}
-.booth{width:880px;margin:18px auto;border:10px ridge #d4af37;background:#5b0f63;box-shadow:0 0 40px #000 inset,12px 12px 0 #000}
-.curtain{text-align:center;background:repeating-linear-gradient(90deg,#8a0033 0 28px,#b00048 28px 56px);padding:16px;border-bottom:8px ridge #d4af37}
-h1{font-size:36px;margin:0;color:#ffe6a8;text-shadow:3px 3px #000}.crystal{font-size:72px;text-align:center;filter:drop-shadow(0 0 12px #9bf6ff)}
-.layout{display:grid;grid-template-columns:220px 1fr;gap:12px;padding:12px}.panel{background:#26002c;border:4px double #d4af37;padding:10px}.panel a{display:block;color:#9bf6ff;margin:6px 0}
-.ticket{background:#fff2bd;color:#3b1b00;border:3px dashed #7a4a00;margin-bottom:12px;padding:8px;text-align:center}.ticket b{display:block;font-size:16px}
-.shelf{background:#fff2bd;color:#3b1b00;border:4px solid #d4af37;margin-bottom:12px}.shelf h2{margin:0;background:#3b1b00;color:#ffe6a8;padding:6px 9px}.count{float:right;color:#d4af37}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:10px}.book{background:#6b1a75;color:#ffe6a8;border:4px double #d4af37;border-radius:14px 14px 4px 4px;padding:8px;text-align:center;min-height:220px}.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:2px solid #ffe6a8;filter:saturate(1.2)}.t{font-weight:bold;margin-top:5px}.a{font-style:italic;color:#9bf6ff}.c{text-align:left;background:#26002c;border:1px solid #d4af37;margin-top:5px;padding:5px;font-size:10px}.star{color:#ffdf00}
+body{margin:0;background:#0a5c2b;color:#fff;font-family:"Comic Sans MS",Tahoma,sans-serif;font-size:12px;background-image:radial-gradient(circle,#0e7938 1px,transparent 2px);background-size:24px 24px;overflow-x:hidden}
+.desk{width:930px;margin:18px auto;position:relative;min-height:780px}
+.window{position:absolute;background:#c0c0c0;border:2px outset #fff;box-shadow:6px 6px 0 rgba(0,0,0,.45);color:#111}.title{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-family:Tahoma,sans-serif;font-weight:bold;padding:3px 5px;display:flex;justify-content:space-between}.title span:last-child{background:#c0c0c0;color:#000;border:1px outset #fff;width:14px;text-align:center}
+.main{left:112px;top:36px;width:690px}.panel{padding:10px}.table{background:#087a38;border:8px ridge #ffd23f;border-radius:34px;padding:14px;text-align:center;box-shadow:inset 0 0 30px #003d1d}
+h1{font-family:Impact,"Arial Black",sans-serif;font-size:52px;margin:0;color:#ff3131;text-shadow:3px 3px #fff,6px 6px #111;letter-spacing:2px}.tag{color:#fff;font-weight:bold;text-shadow:1px 1px #003d1d}
+.centerpile{margin:12px auto 6px;width:180px;height:120px;position:relative}.uno-back,.drawpile{position:absolute;width:82px;height:116px;border-radius:12px;border:5px solid #fff;box-shadow:4px 4px 0 #111}.uno-back{left:12px;background:#111;color:#ff3131;display:grid;place-items:center;font-family:Impact;font-size:32px;transform:rotate(-9deg)}.drawpile{right:12px;background:#ffd23f;color:#0055ff;display:grid;place-items:center;font-family:Impact;font-size:28px;transform:rotate(8deg)}
+.spread{background:#063f21;border:4px inset #ffd23f;padding:8px;margin-top:10px;color:#fff;text-align:left}.shelf{background:#111;border:4px solid #fff;margin-bottom:12px}.shelf h2{margin:0;padding:6px 9px;font-size:17px;text-transform:uppercase}.shelf:nth-child(1) h2{background:#ff3131}.shelf:nth-child(2) h2{background:#0055ff}.shelf:nth-child(3) h2{background:#ffd23f;color:#111}.shelf:nth-child(4) h2{background:#0bb34b}.shelf:nth-child(5) h2{background:#111;color:#ffd23f}.count{float:right}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:10px}.book{border:6px solid #fff;border-radius:16px;padding:8px;text-align:center;min-height:230px;position:relative;box-shadow:5px 5px 0 #000;transform:rotate(-3deg);overflow:hidden}.book:nth-child(2){transform:translateY(13px) rotate(2deg)}.book:nth-child(3){transform:rotate(4deg)}
+.book:before,.book:after{content:attr(data-num);position:absolute;font-family:Impact;font-size:28px}.book:before{left:7px;top:2px}.book:after{right:7px;bottom:0;transform:rotate(180deg)}
+.red{background:#ff3131}.blue{background:#0055ff}.yellow{background:#ffd23f;color:#111}.green{background:#0bb34b}.wild{background:linear-gradient(135deg,#ff3131 0 25%,#0055ff 25% 50%,#ffd23f 50% 75%,#0bb34b 75%);color:#fff}
+.book img{width:76%;aspect-ratio:2/3;object-fit:cover;border:3px solid #fff;margin-top:22px;background:#fff}.t{font-weight:bold;margin-top:5px;text-shadow:1px 1px #000}.yellow .t,.yellow .a,.yellow .c{text-shadow:none}.a{font-style:italic}.c{text-align:left;background:rgba(255,255,255,.88);color:#111;border:2px dashed #111;margin-top:5px;padding:5px;font-size:10px}.star{background:#111;color:#ffd23f;padding:0 4px;border-radius:8px}
+.ad{width:178px}.ad .panel{background:#fff8cc}.ad1{left:0;top:90px}.ad2{right:0;top:220px}.ad3{left:24px;top:548px}.ad b{color:#ff3131}.ad a{display:block;color:#00e;margin:4px 0}.blink{animation:blink 1s steps(2) infinite}@keyframes blink{50%{visibility:hidden}}
+button{font-family:"MS Sans Serif",Tahoma,sans-serif}
 </style>
 </head>
 <body>
-<div class="booth"><div class="curtain"><h1>Madame Bibliotheca's Fortune Booth</h1><div>choose a shelf and receive three strange prophecies</div></div><div class="layout"><aside class="panel"><div class="crystal">🔮</div><div class="ticket"><b>YOUR READING</b>paid in browser cookies</div><div id="links"></div></aside><main id="shelves"></main></div></div>
+<div class="desk">
+<div class="window ad ad1"><div class="title">draw_four_ad.gif <span>x</span></div><div class="panel"><b class="blink">FREE WILD CARD!!!</b><br>Click here to reverse your TBR pile.<a href="#">draw now</a></div></div>
+<div class="window ad ad2"><div class="title">uno webring <span>x</span></div><div class="panel"><b>Book Card Webring</b><a href="#">previous player</a><a href="#">random hand</a><a href="#">next player</a></div></div>
+<div class="window ad ad3"><div class="title">table chat <span>x</span></div><div class="panel">donut played a red book card.<br>you said: UNO!!!<br><br><button>send</button> <button>skip</button></div></div>
+<div class="window main"><div class="title">Book UNO Table - Netscape Game Room <span>x</span></div><div class="panel"><div class="table"><h1>BOOK UNO</h1><div class="tag">match by shelf, author, mood, or pure chaos</div><div class="centerpile"><div class="uno-back">UNO</div><div class="drawpile">DRAW</div></div><div class="spread" id="shelves"></div></div></div></div>
+</div>
 <script>
-const SHELVES=[['currently-reading','The Present Spread'],['read','The Past Spread'],['want-to-read','The Future Spread'],['marinating','The Maybe Spread'],['on-hold','The Reversed Spread']];
+const SHELVES=[['currently-reading','Red Hand: Currently Reading'],['read','Blue Hand: Finished'],['want-to-read','Yellow Hand: Wishlist'],['marinating','Green Hand: Maybe Later'],['on-hold','Wild Hand: On Hold']];
+const COLORS=['red','blue','yellow','green','wild'];
 function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
-fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves'),links=document.getElementById('links');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;links.innerHTML+=`<a href="#${id}">draw ${label}</a>`;const sec=document.createElement('section');sec.className='shelf';sec.id=id;sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="cards">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div class="t">${b.starred?'<span class="star">✦</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves');SHELVES.forEach(([id,label],i)=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="cards">${items.map((b,j)=>`<div class="book ${COLORS[(i+j)%COLORS.length]}" data-num="${b.starred?'★':j+1}"><img src="../${esc(b.cover)}" alt="${esc(b.title)}"><div class="t">${b.starred?'<span class="star">WILD</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
 </script>
 </body>
 </html>

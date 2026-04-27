@@ -2,24 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GIFCities Book Sticker Machine</title>
+<title>Book Terrarium Cam</title>
 <style>
-body{margin:0;background:#ff6ad5;font-family:"Comic Sans MS",Tahoma,sans-serif;font-size:12px;color:#260022;background-image:repeating-linear-gradient(45deg,#ff6ad5 0 18px,#9bf6ff 18px 36px,#fdff6a 36px 54px)}
-.wall{width:900px;margin:18px auto;background:#fff;border:8px ridge #2600ff;box-shadow:12px 12px 0 #260022}
-.header{text-align:center;background:#2600ff;color:#fdff6a;padding:10px;text-shadow:2px 2px #ff006e}h1{font-size:38px;margin:0}.header marquee{background:#fdff6a;color:#ff006e;border:3px dashed #fff;margin-top:6px}
-.layout{display:grid;grid-template-columns:210px 1fr;gap:10px;padding:10px}
-.machine{background:#c0c0c0;border:5px outset #fff;padding:8px;text-align:center}.slot{background:#000;color:#0f0;font-family:"Courier New",monospace;border:3px inset #777;padding:8px;margin:8px 0}.knob{width:90px;height:90px;border-radius:50%;background:conic-gradient(#eee,#777,#eee);border:6px outset #fff;margin:12px auto}.tray{background:#111;border:4px inset #777;height:60px;color:#fff;display:grid;place-items:center}
-.buttons span{display:inline-block;background:#ff006e;color:#fff;border:2px outset #fff;padding:3px 6px;margin:2px;font-weight:bold}
-.shelf{background:#fff8fb;border:4px solid #2600ff;margin-bottom:10px}.shelf h2{margin:0;background:#fdff6a;color:#2600ff;padding:5px 8px;font-size:18px}.count{float:right;color:#ff006e}
-.stickers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:10px}.book{background:#9bf6ff;border:3px dashed #ff006e;padding:6px;text-align:center;transform:rotate(-2deg);box-shadow:4px 4px 0 #fdff6a}.book:nth-child(2){transform:rotate(2deg)}.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:4px ridge #fff}.t{font-weight:bold;color:#2600ff;margin-top:5px}.a{font-style:italic}.c{background:#fff;border:1px dotted #2600ff;margin-top:4px;padding:4px;font-size:10px;text-align:left}.star{background:#ff006e;color:#fff}
+body{margin:0;background:#06150b;color:#eaffd6;font-family:"Trebuchet MS",Tahoma,sans-serif;font-size:12px;background-image:radial-gradient(circle at 20% 20%,#1f5c2d 0 2px,transparent 3px),radial-gradient(circle at 75% 65%,#2e7a3d 0 2px,transparent 3px);background-size:42px 42px;padding:18px}
+.lab{width:910px;margin:auto;background:#14351f;border:8px ridge #9bd36a;box-shadow:0 0 45px #000 inset,12px 12px 0 #020802}
+.header{background:#d7ff9e;color:#14351f;border-bottom:6px double #4f8f35;padding:10px;text-align:center}
+h1{font-size:40px;margin:0;text-shadow:2px 2px #fff}.status{font-family:"Courier New",monospace;background:#14351f;color:#8cff6b;display:inline-block;padding:3px 9px;margin-top:5px;border:2px inset #4f8f35}
+.rig{display:grid;grid-template-columns:300px 1fr;gap:12px;padding:12px}
+.cam{background:#0a1b10;border:5px inset #9bd36a;padding:10px}.view{height:330px;border:6px solid #d7ff9e;background:linear-gradient(#b9f7ff 0 35%,#5ebd5b 36% 72%,#3b2110 73%);position:relative;overflow:hidden}
+.sun{position:absolute;right:22px;top:18px;width:58px;height:58px;border-radius:50%;background:#fff96b;box-shadow:0 0 20px #fff96b}
+.vine{position:absolute;top:-10px;width:38px;height:210px;border-left:8px dotted #1f7a31}.v1{left:34px}.v2{left:108px;height:265px}.v3{right:50px}
+.snail{position:absolute;left:78px;bottom:72px;font-family:"Courier New",monospace;white-space:pre;color:#14351f;background:#d7ff9e;border:2px solid #14351f;padding:4px;animation:crawl 7s ease-in-out infinite}@keyframes crawl{50%{transform:translateX(88px)}}
+.label{background:#000;color:#8cff6b;font-family:"Courier New",monospace;padding:7px;margin-top:8px;border:2px inset #4f8f35}.dials{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.dial{background:#d7ff9e;color:#14351f;border:3px outset #9bd36a;text-align:center;padding:6px}.dial b{font-size:20px}
+.shelf{background:#edfbdc;color:#14351f;border:4px solid #9bd36a;margin-bottom:12px;position:relative}.shelf:before{content:"SPECIMEN TRAY";position:absolute;right:8px;top:-10px;background:#14351f;color:#8cff6b;font-family:"Courier New",monospace;font-size:9px;padding:1px 5px}
+.shelf h2{margin:0;background:#4f8f35;color:#fff;padding:6px 9px}.count{float:right;color:#d7ff9e}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;padding:9px}.book{background:#fff;border:3px double #4f8f35;padding:7px;text-align:center;clip-path:polygon(6% 0,94% 0,100% 88%,50% 100%,0 88%)}.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:2px solid #14351f}.t{font-weight:bold;color:#1f5c2d;margin-top:5px}.a{font-style:italic}.c{font-size:10px;text-align:left;background:#e5ffd0;border-left:4px solid #4f8f35;margin-top:4px;padding:4px}.star{color:#d68b00}
 </style>
 </head>
 <body>
-<div class="wall"><div class="header"><h1>GIFCities Sticker Machine</h1><marquee>turn the knob for three glitter book stickers from each shelf!!!</marquee></div><div class="layout"><aside class="machine"><div class="slot">INSERT 25¢<br>BOOK STICKERS</div><div class="knob"></div><div class="buttons"><span>sparkle</span><span>blink</span><span>print</span></div><div class="tray">fresh stickers drop here</div></aside><main id="shelves"></main></div></div>
+<div class="lab"><div class="header"><h1>Book Terrarium Cam</h1><div>tiny shelf ecosystem broadcasting live since 2002</div><div class="status">CAM 03 ONLINE / HUMIDITY 78% / THREE SPECIMENS PER TRAY</div></div><div class="rig"><aside class="cam"><div class="view"><div class="sun"></div><div class="vine v1"></div><div class="vine v2"></div><div class="vine v3"></div><div class="snail">   ____@
+ _/  o  \
+(_       )
+  \_____/</div></div><div class="label">snail librarian detected near moss stack</div><div class="dials"><div class="dial">soil<br><b>OK</b></div><div class="dial">lamp<br><b>ON</b></div></div></aside><main id="shelves"></main></div></div>
 <script>
-const SHELVES=[['currently-reading','fresh sticker roll'],['read','album page'],['want-to-read','wishlist decals'],['marinating','mystery capsule'],['on-hold','jammed dispenser']];
+const SHELVES=[['currently-reading','Sprouting Now'],['read','Pressed Leaves'],['want-to-read','Seed Packets'],['marinating','Compost Maybes'],['on-hold','Dormant Bulbs']];
 function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
-fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="stickers">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div class="t">${b.starred?'<span class="star">RARE</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div class="t">${b.starred?'<span class="star">✹</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
 </script>
 </body>
 </html>
