@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bookworm 98 - Virtual Desktop Pet</title>
+<style>
+body{margin:0;background:#008080;font-family:"MS Sans Serif",Tahoma,sans-serif;font-size:12px;color:#000;overflow-x:hidden}
+.desktop{width:920px;margin:18px auto;position:relative;min-height:720px}
+.icon{position:absolute;text-align:center;color:#fff;text-shadow:1px 1px #000;width:76px}.icon .ico{font-size:34px}.i1{left:8px;top:20px}.i2{left:8px;top:105px}.i3{left:8px;top:190px}
+.window{position:absolute;background:#c0c0c0;border:2px outset #fff;box-shadow:5px 5px 0 rgba(0,0,0,.35)}
+.title{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-weight:bold;padding:3px 5px;display:flex;justify-content:space-between}.title span:last-child{background:#c0c0c0;color:#000;border:1px outset #fff;width:14px;text-align:center}
+.petwin{left:96px;top:18px;width:360px}.invwin{left:476px;top:18px;width:350px}.shelfwin{left:96px;top:330px;width:730px}
+.panel{padding:8px}.screen{background:#9bbc0f;border:8px solid #222;box-shadow:inset 0 0 0 3px #306230;height:205px;position:relative;overflow:hidden}
+.worm{position:absolute;left:72px;top:62px;font-family:"Courier New",monospace;font-size:16px;line-height:1;white-space:pre;color:#0f380f;animation:wig 1.2s steps(2) infinite}@keyframes wig{50%{transform:translateX(8px)}}
+.bubble{position:absolute;right:12px;top:12px;background:#dfff9b;border:2px solid #0f380f;padding:5px;width:112px;color:#0f380f}
+.floor{position:absolute;left:0;right:0;bottom:0;height:48px;background:repeating-linear-gradient(90deg,#8bac0f 0 16px,#9bbc0f 16px 32px)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.stat{border:2px inset #fff;background:#fff;padding:4px}.bar{height:10px;border:1px solid #000;background:#fff}.fill{height:100%;background:#008000}
+.buttons span{display:inline-block;border:2px outset #fff;background:#c0c0c0;padding:5px 9px;margin:5px 2px 0}.buttons span:active{border-style:inset}
+.tabs{background:#808080;padding:4px}.tabs span{display:inline-block;background:#c0c0c0;border:2px outset #fff;padding:3px 8px}
+.foodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.food{background:#fff;border:2px inset #fff;padding:5px;text-align:center;min-height:96px}.food img{width:48px;height:68px;object-fit:cover;border:1px solid #000}.food b{display:block;font-size:10px;color:#000080}.food small{font-size:9px}
+.shelf{border:2px inset #fff;background:#fff;margin:8px}.shelf h2{font-size:13px;margin:0;background:#000080;color:#fff;padding:3px 5px}.count{float:right}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px}.book{border:1px solid #888;background:#ffffe1;padding:6px;display:grid;grid-template-columns:46px 1fr;gap:6px}.book img{width:46px;height:66px;object-fit:cover}.t{font-weight:bold;color:#800000}.a{font-style:italic}.c{font-size:10px;margin-top:3px}.star{color:#f00}
+.taskbar{position:fixed;left:0;right:0;bottom:0;background:#c0c0c0;border-top:2px outset #fff;padding:3px}.start{border:2px outset #fff;padding:3px 12px;font-weight:bold}.clock{float:right;border:1px inset #fff;padding:3px 8px}
+</style>
+</head>
+<body>
+<div class="desktop">
+<div class="icon i1"><div class="ico">🖥</div>My Books</div><div class="icon i2"><div class="ico">📁</div>Food</div><div class="icon i3"><div class="ico">🗑</div>Recycle Bin</div>
+<div class="window petwin"><div class="title">BOOKWORM98.EXE <span>x</span></div><div class="panel"><div class="screen"><div class="bubble" id="speech">feed me a staff pick!!</div><div class="worm"> /~~~~\
+|  oo  |
+ \_==_/
+ /|██|\
+  /  \</div><div class="floor"></div></div><div class="stats"><div class="stat">pages eaten<div class="bar"><div class="fill" style="width:78%"></div></div></div><div class="stat">bookmark joy<div class="bar"><div class="fill" style="width:92%"></div></div></div></div><div class="buttons"><span>Feed</span><span>Read Aloud</span><span>Clean Cache</span><span>Nap</span></div></div></div>
+<div class="window invwin"><div class="title">Food Inventory <span>x</span></div><div class="tabs"><span>snacks</span><span>toys</span><span>medicine</span></div><div class="panel"><div class="foodgrid" id="foods"></div></div></div>
+<div class="window shelfwin"><div class="title">Book Food Source Folders <span>x</span></div><div id="shelves"></div></div>
+</div><div class="taskbar"><span class="start">Start</span><span class="clock">04:26 PM</span></div>
+<script>
+const SHELVES=[['currently-reading','Fresh Snacks'],['read','Digested Classics'],['want-to-read','Future Treats'],['marinating','Aged Crumbs'],['on-hold','Frozen Snacks']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves'),foods=document.getElementById('foods');let foodCount=0;SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;if(foodCount<6){items.slice(0,2).forEach(b=>{foodCount++;foods.innerHTML+=`<div class="food"><img src="../${esc(b.cover)}" alt=""><b>${esc(b.title)}</b><small>${esc(label)}</small></div>`})}const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div><div class="t">${b.starred?'<span class="star">★</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div></div>`).join('')}</div>`;root.appendChild(sec)})});
+</script>
+</body>
+</html>

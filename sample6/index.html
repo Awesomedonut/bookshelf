@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>bookshelf.exe - Windows 95 Catalog</title>
+<style>
+body{margin:0;background:#008080;font-family:"MS Sans Serif",Tahoma,sans-serif;font-size:12px;color:#000;padding:22px}
+.window{max-width:900px;margin:auto;background:#c0c0c0;border:2px outset #fff;box-shadow:8px 8px 0 rgba(0,0,0,.35)}
+.title{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-weight:bold;padding:3px 6px;display:flex;justify-content:space-between}
+.buttons span{display:inline-block;width:14px;height:12px;background:#c0c0c0;border:1px outset #fff;color:#000;text-align:center;line-height:10px;margin-left:2px}
+.menu{padding:4px 8px;border-bottom:1px solid #808080}.menu span{text-decoration:underline;margin-right:18px}
+.toolbar{border-top:1px solid #fff;border-bottom:1px solid #808080;padding:6px}.btn{display:inline-block;border:2px outset #fff;background:#c0c0c0;padding:3px 10px;margin-right:4px}
+.content{display:grid;grid-template-columns:190px 1fr;gap:8px;padding:8px}
+.tree,.pane{border:2px inset #fff;background:#fff;padding:8px;min-height:520px}
+.tree h3{font-size:12px;margin:0 0 8px}.tree a{display:block;color:#000;text-decoration:none;padding:2px}
+h1{font-size:18px;margin:0 0 8px}.shelf{margin-bottom:14px;border:1px solid #808080}.shelf h2{margin:0;background:#000080;color:#fff;font-size:13px;padding:3px 6px}.count{float:right}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#808080;border-top:1px solid #808080}
+.book{background:#fff;padding:7px;text-align:center}.book img{width:88px;max-width:100%;aspect-ratio:2/3;object-fit:cover;border:1px solid #000}.t{font-weight:bold;margin-top:4px}.a{font-style:italic;color:#444}.c{font-size:11px;background:#ffffe1;border:1px solid #888;margin-top:4px;padding:3px;text-align:left}.star{color:#f00}
+.status{border-top:1px solid #808080;padding:4px 6px;display:flex;gap:6px}.status div{border:1px inset #fff;padding:2px 6px;flex:1}
+</style>
+</head>
+<body>
+<div class="window">
+<div class="title"><span>bookshelf.exe</span><span class="buttons"><span>_</span><span>□</span><span>x</span></span></div>
+<div class="menu"><span>F</span>ile <span>E</span>dit <span>V</span>iew <span>B</span>ookmarks <span>H</span>elp</div>
+<div class="toolbar"><span class="btn">Open</span><span class="btn">Sort</span><span class="btn">Properties</span><span class="btn">Print</span></div>
+<div class="content"><aside class="tree"><h3>Bookshelf Folders</h3><div id="links"></div></aside><main class="pane"><h1>My Book Catalog</h1><div id="shelves"></div></main></div>
+<div class="status"><div>Ready</div><div>Local intranet</div><div id="total">0 objects</div></div>
+</div>
+<script>
+const SHELVES=[['currently-reading','Currently Reading'],['read','Read'],['want-to-read','Want To Read'],['marinating','Skimmed & Later'],['on-hold','On Hold']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{document.getElementById('total').textContent=books.length+' objects';const root=document.getElementById('shelves'),links=document.getElementById('links');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;links.innerHTML+=`<a href="#${id}">▸ ${label}</a>`;const sec=document.createElement('section');sec.className='shelf';sec.id=id;sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt="${esc(b.title)}"><div class="t">${b.starred?'<span class="star">★</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
+</script>
+</body>
+</html>

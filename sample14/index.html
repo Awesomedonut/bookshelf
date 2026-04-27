@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dot Matrix Library Checkout</title>
+<style>
+body{margin:0;background:#394044;font-family:"Courier New",monospace;color:#111;padding:20px;background-image:linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:18px 18px}
+.printer{width:760px;margin:auto;background:#d0d3c8;border:6px outset #888;padding:14px;box-shadow:12px 12px 0 #1b1f22}
+.controls{background:#2b2f31;color:#9cff9c;border:3px inset #777;padding:8px;margin-bottom:12px}.light{display:inline-block;width:12px;height:12px;background:#4cff4c;border-radius:50%;box-shadow:0 0 8px #4cff4c;margin-right:6px}
+.paper{background:#fffdf0;border-left:24px dotted #d0d3c8;border-right:24px dotted #d0d3c8;padding:18px 22px;box-shadow:inset 0 0 0 1px #aaa}
+h1{text-align:center;font-size:24px;margin:0 0 6px;letter-spacing:2px}.sub{text-align:center;border-top:1px dashed #111;border-bottom:1px dashed #111;padding:5px;margin-bottom:12px}
+.shelf{margin:18px 0}.shelf h2{font-size:16px;margin:0;border-bottom:1px dashed #111;text-transform:uppercase}.count{float:right}
+.book{display:grid;grid-template-columns:76px 1fr;gap:12px;border-bottom:1px dotted #999;padding:8px 0}.book img{width:76px;aspect-ratio:2/3;object-fit:cover;filter:grayscale(1) contrast(1.4);border:1px solid #111}.t{font-weight:bold}.a{font-style:italic}.c{margin-top:4px}.due{margin-top:4px;background:#111;color:#fff;display:inline-block;padding:2px 5px}.star{background:#111;color:#fff;padding:0 3px}
+.tear{text-align:center;margin-top:14px;letter-spacing:4px;color:#555}
+</style>
+</head>
+<body>
+<div class="printer"><div class="controls"><span class="light"></span>ONLINE &nbsp; FORM FEED &nbsp; TRACTOR READY &nbsp; PRINTING CHECKOUT SLIP...</div><div class="paper"><h1>DONUT PUBLIC LIBRARY</h1><div class="sub">CHECKOUT RECEIPT - KEEP FOR YOUR RECORDS - 3 ITEMS PER SECTION</div><div id="shelves"></div><div class="tear">- - - - - - - - - - - - - - - - - - - -</div></div></div>
+<script>
+const SHELVES=[['currently-reading','checked out now'],['read','returned'],['want-to-read','holds queue'],['marinating','reference desk'],['on-hold','renew later']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves');SHELVES.forEach(([id,label],i)=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;const sec=document.createElement('section');sec.className='shelf';sec.innerHTML=`<h2>${label}<span class="count">${all.length} records</span></h2>${items.map((b,j)=>`<div class="book"><img src="../${esc(b.cover)}" alt="${esc(b.title)}"><div><div class="t">${b.starred?'<span class="star">STAFF PICK</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}<div class="due">DUE: 05/${String(10+i+j).padStart(2,'0')}/2026</div></div></div>`).join('')}`;root.appendChild(sec)})});
+</script>
+</body>
+</html>

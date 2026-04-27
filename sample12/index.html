@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bookster P2P - Search Results</title>
+<style>
+body{margin:0;background:#d5d5d5;font-family:Tahoma,Arial,sans-serif;font-size:11px;color:#111}
+.app{width:930px;margin:18px auto;background:#ece9d8;border:2px outset #fff;box-shadow:8px 8px 0 rgba(0,0,0,.35)}
+.title{background:linear-gradient(90deg,#0a246a,#a6caf0);color:#fff;font-weight:bold;padding:4px 6px}.menu{padding:4px 8px;border-bottom:1px solid #888}.menu span{text-decoration:underline;margin-right:14px}
+.toolbar{display:grid;grid-template-columns:190px 1fr 220px;gap:8px;padding:8px;border-bottom:1px solid #999}.logo{font-size:26px;font-weight:bold;color:#3b4cc0}.search{border:2px inset #fff;background:#fff;padding:5px}.search input{width:72%}.viz{background:#000;border:2px inset #777;display:flex;align-items:end;gap:3px;padding:4px}.viz span{width:10px;background:#39ff14}.viz span:nth-child(2n){height:32px}.viz span:nth-child(3n){height:18px}.viz span:nth-child(5n){height:44px}
+.main{display:grid;grid-template-columns:180px 1fr;gap:8px;padding:8px}.side{border:2px inset #fff;background:#fff;padding:6px}.side a{display:block;color:#00e;margin:4px 0}.results{border:2px inset #fff;background:#fff}
+.shelf h2{font-size:12px;margin:0;background:#003399;color:#fff;padding:4px 6px}.count{float:right}.track{display:grid;grid-template-columns:22px 44px 1fr 70px 70px 70px;gap:6px;align-items:center;border-top:1px solid #ddd;padding:4px}
+.track:nth-child(even){background:#eef3ff}.track img{width:44px;height:60px;object-fit:cover}.t{color:#00e;text-decoration:underline;font-weight:bold}.a{color:#555}.c{font-size:10px;color:#333}.status{color:#008000}.star{color:#f60}.foot{border-top:1px solid #999;padding:5px 8px}
+</style>
+</head>
+<body>
+<div class="app"><div class="title">Bookster P2P - connected as donut_1337</div><div class="menu"><span>F</span>ile <span>T</span>ransfers <span>S</span>earch <span>L</span>ibrary <span>H</span>elp</div><div class="toolbar"><div class="logo">Bookster</div><div class="search">Search: <input value="books with feelings"> <button>Find More</button></div><div class="viz"><span style="height:22px"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="main"><aside class="side"><b>Shared Folders</b><div id="links"></div><hr><b>Peers Online</b><a>librarycat</a><a>dialup_dream</a><a>tea_and_tabs</a></aside><main class="results" id="shelves"></main></div><div class="foot">15 results shown. Downloads are fictional. Please support your local library.</div></div>
+<script>
+const SHELVES=[['currently-reading','Active Downloads'],['read','Completed Files'],['want-to-read','Queued Searches'],['marinating','Partial Files'],['on-hold','Paused Transfers']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves'),links=document.getElementById('links');let n=1;SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;links.innerHTML+=`<a href="#${id}">${label}</a>`;const sec=document.createElement('section');sec.className='shelf';sec.id=id;sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2>${items.map(b=>`<div class="track"><div>${n++}</div><img src="../${esc(b.cover)}" alt=""><div><div class="t">${b.starred?'<span class="star">★</span> ':''}${esc(b.title)}.book</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div><div>${Math.floor(20+n*3)} MB</div><div class="status">${id==='on-hold'?'paused':'available'}</div><div>${Math.floor(5+n)} peers</div></div>`).join('')}`;root.appendChild(sec)})});
+</script>
+</body>
+</html>

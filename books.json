@@ -170,7 +170,7 @@
     "title": "The Left Hand of Darkness",
     "author": "Ursula K. Le Guin",
     "cover": "covers/the-left-hand-of-darkness-le-guin.jpg",
-    "shelf": "want-to-read",
+    "shelf": "currently-reading",
     "dateAdded": "2026-04-07"
   },
   {
@@ -1505,5 +1505,62 @@
     "cover": "covers/the-hitchhikers-guide-to-the-galaxy-adams.jpg",
     "shelf": "want-to-read",
     "dateAdded": "2026-04-16"
+  },
+  {
+    "title": "The Silk Roads: A New History of the World",
+    "author": "Peter Frankopan",
+    "cover": "covers/the-silk-roads-frankopan.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "title": "Genghis Khan and the Making of the Modern World",
+    "author": "Jack Weatherford",
+    "cover": "covers/genghis-khan-and-the-making-of-the-modern-world-weatherford.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "title": "The Paper Trail: An Unexpected History of a Revolutionary Invention",
+    "author": "Alexander Monro",
+    "cover": "covers/the-paper-trail-monro.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "title": "Wu: The Chinese Empress Who Schemed, Seduced and Murdered Her Way to Become a Living God",
+    "author": "Jonathan Clements",
+    "cover": "covers/wu-clements.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-17"
+  },
+  {
+    "title": "The Manchu-Tungusic Languages",
+    "author": "Alexander Vovin",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "title": "Languages of Ancient Southern Mongolia and North China",
+    "author": "Andrew Shimunek",
+    "cover": "covers/languages-of-ancient-southern-mongolia-shimunek.jpg",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "title": "Women Writers and the Literary World in Early Modern China",
+    "author": "Daria Berg",
+    "cover": "",
+    "shelf": "want-to-read",
+    "dateAdded": "2026-04-20"
+  },
+  {
+    "title": "The Sun and the Starmaker",
+    "author": "Rachel Griffin",
+    "cover": "covers/the-sun-and-the-starmaker-griffin.jpg",
+    "shelf": "on-hold",
+    "comment": "on hold @ lib, buddy read",
+    "dateAdded": "2026-04-26"
   }
 ]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Labyrinth 1.0</title>
+<style>
+body{margin:0;background:#08040d;color:#ffdca8;font-family:"Courier New",monospace;background-image:radial-gradient(#4e2d12 1px,transparent 1px);background-size:18px 18px}
+.cabinet{width:920px;margin:18px auto;border:10px double #8b5a2b;background:#2a1608;box-shadow:0 0 45px #000 inset,12px 12px 0 #000;padding:14px}
+.plaque{text-align:center;background:#c6954a;color:#2a1608;border:4px ridge #f4d58a;padding:10px}h1{font-size:38px;margin:0;text-shadow:2px 2px #fbe3a0}
+.maze{display:grid;grid-template-columns:190px 1fr 190px;grid-template-rows:auto auto auto;gap:10px;margin-top:14px}
+.room{background:#d8a75f;color:#2a1608;border:5px ridge #8b5a2b;padding:8px;min-height:145px;position:relative}.room:before{content:"";position:absolute;inset:5px;border:1px dashed #5b3513;pointer-events:none}
+.room h2{font-size:15px;margin:0 0 6px;text-align:center;background:#5b3513;color:#ffdca8;padding:4px}.count{font-size:10px}
+.center{grid-column:2;grid-row:1 / span 3;background:#f0c575;border:6px double #5b3513;color:#2a1608;display:grid;place-items:center;text-align:center;padding:18px}
+.center .sigil{font-size:74px}.center b{font-size:22px}.door{display:block;background:#2a1608;color:#ffdca8;border:2px outset #8b5a2b;margin:6px;padding:5px;text-decoration:none;text-align:center}
+.book{display:grid;grid-template-columns:42px 1fr;gap:6px;background:#fbe3a0;border:2px solid #5b3513;margin:5px 0;padding:4px;font-size:10px}.book img{width:42px;height:58px;object-fit:cover;border:1px solid #2a1608}.t{font-weight:bold}.a{font-style:italic}.c{font-size:9px}.star{color:#a00000}
+.r1{grid-column:1;grid-row:1}.r2{grid-column:3;grid-row:1}.r3{grid-column:1;grid-row:2}.r4{grid-column:3;grid-row:2}.r5{grid-column:1 / span 3;grid-row:4}
+.r5 .books{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+</style>
+</head>
+<body>
+<div class="cabinet"><div class="plaque"><h1>Library Labyrinth</h1><div>clicking every door is unnecessary, but spiritually correct</div></div><div class="maze"><div class="center"><div><div class="sigil">◇</div><b>THE CARD CATALOG ORACLE</b><p>Five chambers, three artifacts each. The rest remain hidden in the stacks.</p><div id="doors"></div></div></div><div id="shelves"></div></div></div>
+<script>
+const SHELVES=[['currently-reading','Lantern Desk'],['read','Return Chute'],['want-to-read','Locked Tower'],['marinating','Dust Annex'],['on-hold','Trapdoor']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves'),doors=document.getElementById('doors');SHELVES.forEach(([id,label],i)=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;doors.innerHTML+=`<a class="door" href="#${id}">open ${label}</a>`;const sec=document.createElement('section');sec.className='room r'+(i+1);sec.id=id;sec.innerHTML=`<h2>${label} <span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div><div class="t">${b.starred?'<span class="star">◆</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div></div>`).join('')}</div>`;root.appendChild(sec)})});
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Donut's Bookshelf - Angelfire Frames Edition</title>
+<style>
+body{margin:0;background:#003399 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ctext y='18' font-size='16' fill='%23ffff00'%3E*%3C/text%3E%3Ctext x='18' y='34' font-size='16' fill='%23ff66ff'%3E*%3C/text%3E%3C/svg%3E");font-family:Arial,Helvetica,sans-serif;color:#000}
+.wrap{width:820px;margin:18px auto;border:5px outset #ccc;background:#fff}
+.top{background:#000;color:#0ff;text-align:center;padding:8px;border-bottom:5px ridge #f0f}
+h1{font-size:44px;margin:6px 0;color:#ff0;text-shadow:3px 3px #f0f,-2px -2px #00f;font-family:Impact,Arial Black,sans-serif;letter-spacing:1px}
+marquee{background:#ff0;color:#f00;font-weight:bold;padding:4px;border-top:2px solid #f0f;border-bottom:2px solid #f0f}
+.body{display:grid;grid-template-columns:170px 1fr}
+.side{background:#c0c0c0;border-right:4px groove #999;padding:8px;font-size:12px}
+.box{border:3px ridge #fff;background:#eee;margin-bottom:9px;padding:6px}
+.box b{display:block;background:#000080;color:white;margin:-6px -6px 6px;padding:3px}
+.box a{display:block;color:#00e;text-decoration:underline;margin:3px 0}
+.main{padding:10px;background:#fffff4}
+.welcome{background:#cff;border:3px dashed #f0f;padding:8px;text-align:center;font-weight:bold;color:#008}
+.shelf{border:3px double #00f;margin:12px 0;background:white}
+.shelf h2{margin:0;background:#00f;color:#ff0;padding:4px 8px;font-size:18px}.count{float:right;color:#fff;font-size:12px}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px}
+.book{border:2px outset #ddd;background:#f8f8ff;text-align:center;padding:6px;font-size:12px}
+.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:1px solid #000}.t{font-weight:bold;color:#c00080;margin-top:4px}.a{font-style:italic;color:#333}.c{font-size:10px;text-align:left;background:#ff9;border:1px dotted #f90;margin-top:4px;padding:3px}.star{color:#f00}
+.foot{background:#000080;color:#fff;text-align:center;font-size:11px;padding:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><h1>Donut's Bookshelf</h1><div>Angelfire / Tripod style frames page</div></div>
+<marquee scrollamount="5">WELCOME WEB SURFER!!! BOOKS UPDATED DAILY!!! ADD THIS PAGE TO YOUR FAVORITES!!!</marquee>
+<div class="body">
+<aside class="side">
+<div class="box"><b>MAIN MENU</b><a href="#">home</a><a href="#">about</a><a href="#">book list</a><a href="#">cool links</a><a href="#">guestbook</a></div>
+<div class="box"><b>STATUS</b>last update: 04/26/1999<br>browser: Netscape<br>resolution: 800x600</div>
+<div class="box"><b>SHELVES</b><div id="links"></div></div>
+<div class="box"><b>COUNTER</b><center style="background:#000;color:#0f0;font-family:monospace;letter-spacing:3px">004209</center></div>
+</aside>
+<main class="main"><div class="welcome">This page uses REAL HTML formatting. No fancy database, just vibes.</div><div id="shelves"></div></main>
+</div>
+<div class="foot">Copyright 1999 Donut. Please do not steal my graphics.</div>
+</div>
+<script>
+const SHELVES=[['currently-reading','Currently Reading'],['read','Finished Books'],['want-to-read','Want To Read'],['marinating','Skimmed / Later'],['on-hold','On Hold']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves'),links=document.getElementById('links');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;links.innerHTML+=`<a href="#${id}">${label} (${all.length})</a>`;const s=document.createElement('section');s.className='shelf';s.id=id;s.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="books">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt="${esc(b.title)}"><div class="t">${b.starred?'<span class="star">★</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(s)})});
+</script>
+</body>
+</html>

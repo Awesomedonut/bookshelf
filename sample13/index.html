@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Madame Bibliotheca's Fortune Booth</title>
+<style>
+body{margin:0;background:#1b001f;color:#ffe6a8;font-family:"Comic Sans MS",cursive;font-size:12px;background-image:radial-gradient(circle,#6b1a75 1px,transparent 2px);background-size:22px 22px}
+.booth{width:880px;margin:18px auto;border:10px ridge #d4af37;background:#5b0f63;box-shadow:0 0 40px #000 inset,12px 12px 0 #000}
+.curtain{text-align:center;background:repeating-linear-gradient(90deg,#8a0033 0 28px,#b00048 28px 56px);padding:16px;border-bottom:8px ridge #d4af37}
+h1{font-size:36px;margin:0;color:#ffe6a8;text-shadow:3px 3px #000}.crystal{font-size:72px;text-align:center;filter:drop-shadow(0 0 12px #9bf6ff)}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:12px;padding:12px}.panel{background:#26002c;border:4px double #d4af37;padding:10px}.panel a{display:block;color:#9bf6ff;margin:6px 0}
+.ticket{background:#fff2bd;color:#3b1b00;border:3px dashed #7a4a00;margin-bottom:12px;padding:8px;text-align:center}.ticket b{display:block;font-size:16px}
+.shelf{background:#fff2bd;color:#3b1b00;border:4px solid #d4af37;margin-bottom:12px}.shelf h2{margin:0;background:#3b1b00;color:#ffe6a8;padding:6px 9px}.count{float:right;color:#d4af37}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:10px}.book{background:#6b1a75;color:#ffe6a8;border:4px double #d4af37;border-radius:14px 14px 4px 4px;padding:8px;text-align:center;min-height:220px}.book img{width:100%;aspect-ratio:2/3;object-fit:cover;border:2px solid #ffe6a8;filter:saturate(1.2)}.t{font-weight:bold;margin-top:5px}.a{font-style:italic;color:#9bf6ff}.c{text-align:left;background:#26002c;border:1px solid #d4af37;margin-top:5px;padding:5px;font-size:10px}.star{color:#ffdf00}
+</style>
+</head>
+<body>
+<div class="booth"><div class="curtain"><h1>Madame Bibliotheca's Fortune Booth</h1><div>choose a shelf and receive three strange prophecies</div></div><div class="layout"><aside class="panel"><div class="crystal">🔮</div><div class="ticket"><b>YOUR READING</b>paid in browser cookies</div><div id="links"></div></aside><main id="shelves"></main></div></div>
+<script>
+const SHELVES=[['currently-reading','The Present Spread'],['read','The Past Spread'],['want-to-read','The Future Spread'],['marinating','The Maybe Spread'],['on-hold','The Reversed Spread']];
+function esc(s){const d=document.createElement('div');d.textContent=s??'';return d.innerHTML}
+fetch('../books.json').then(r=>r.json()).then(books=>{const root=document.getElementById('shelves'),links=document.getElementById('links');SHELVES.forEach(([id,label])=>{const all=books.filter(b=>b.shelf===id),items=all.slice(0,3);if(!all.length)return;links.innerHTML+=`<a href="#${id}">draw ${label}</a>`;const sec=document.createElement('section');sec.className='shelf';sec.id=id;sec.innerHTML=`<h2>${label}<span class="count">${all.length}</span></h2><div class="cards">${items.map(b=>`<div class="book"><img src="../${esc(b.cover)}" alt=""><div class="t">${b.starred?'<span class="star">✦</span> ':''}${esc(b.title)}</div><div class="a">${esc(b.author)}</div>${b.comment?`<div class="c">${esc(b.comment)}</div>`:''}</div>`).join('')}</div>`;root.appendChild(sec)})});
+</script>
+</body>
+</html>
